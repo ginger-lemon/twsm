@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>台灣原生香料地圖</title>
+    <link rel="stylesheet" type="text/css" href="src/index.css">
+
 </head>
 <body>
+    <div class="documentLoaded" id="documentLoaded">
+        <!-- 導覽列 -->
+        <div class="container" id="navbarContainer">
+            <script src="./src/navbar.js"></script>
+            <script>
+                generateNavBar();
+            </script>
+        </div>
+
+        <!-- 搜尋欄位，要預留搜尋結果-->
+        <div class="container" id="searchContainer">
+            <!-- 下拉式選單 -->
+            <div class="container" >
+                <select id="species" name="species">
+                    <option>今天想找什麼香料呢？</option>
+                    <option value="山胡椒">山胡椒 / 馬告</option>
+                    <option value="食茱萸">食茱萸 / 刺蔥</option>
+                    <option value="土肉桂">土肉桂</option>
+                    <option value="土當歸">土當歸</option>
+                    <option value="羅氏鹽膚木">羅氏鹽膚木</option>
+                    <option value="大葉楠果實">大葉楠果實</option>
+                    <option value="月桃">月桃</option>
+                    <option value="艾草">艾草</option>
+                    <option value="紫蘇">紫蘇</option>
+                    <option value="大葉石龍尾">大葉石龍尾</option>
+                </select>
+            </div>
+            <!-- 選單的結果 -->
+            <div class="container" id="resultContainer">
+                <script src="./src/searchResult.js"></script>
+                <script>
+                    generateSpeciesResult();
+                </script>
+            </div>
+            
+        </div>
+
+        <!-- 地圖欄位，會引入 chart.js？ -->
+        <div class="container" id="mapContainer"></div>
+    </div>
     
 </body>
 </html>
