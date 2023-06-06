@@ -1,7 +1,180 @@
-.container {
-    border:  1px solid  #000;
+.documentloaded {
+    background-color: #F8F6F4;
+    height: 100%;
 }
 
-.aboutBox {
-    border:  1px solid  #000;
+.container {
+    display: inline-block;
+    border: 1px solid red;
+    vertical-align: top;
+    position: relative;
+    margin-right: 45px;
 }
+
+/* 搜尋（下拉式選單＋顯示結果）部分 */
+
+.droplistBox {
+    border: 1px solid blue;
+    position: absolute;
+    top: 60px;
+}
+
+.speciesDroplist {
+    width: 395px;
+    height: 60px;
+    border: 3px solid #000000;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #5C5C5C;
+}
+
+/* 以下是連線取得香料資料後才會顯示 */
+/* 顯示學名、分類的區域 */
+.resultBlock { 
+    position: absolute;
+    top: 180px;
+    width: 555px;
+}
+
+.infoBox {
+    border: 1px solid orange;
+}
+
+.taxonNameDiv {
+    border-bottom: 1px solid #000000;
+
+}
+
+.taxonTagDiv {
+    border: 1px solid red;
+    margin-top: 17px;
+}
+
+.taxonotherDiv {
+    border: 1px solid black;
+    margin-top: 34px;
+}
+
+.scientificName {
+    color: #489688;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'Inter';
+    font-style: italic;
+}
+
+.speciesName {
+    color: #2C655B;
+    font-size: 48px;
+    line-height: 58px;
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.speciesTag {
+    background: #188216;
+    border-radius: 37.5px;
+    width: 135px;
+    height: 40px;
+    color: #ffffff;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speciesTag p {
+    flex: inline;
+    text-align: center;
+}
+
+.taxonotherDiv p {
+    color: #5C5C5C;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.levelArea {
+    margin-bottom: 20px;
+}
+
+/* 顯示資料卡的地方，會配合事件觸發收合 */
+.moreInfoBox {
+    display: block; /* 觸發事件時記得處理 */
+    background-color: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.moreInfoCard {
+    border: 1px solid red;
+    display: flex;
+    margin: 25px 75px 25px 33px;
+}
+
+.speciesPic {
+    border: 1px solid salmon;
+    border-radius: 27px;
+    display: inline-block;
+}
+
+.speciesCommonName {
+    border: 1px solid brown;
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5C5C5C;
+}
+
+.cardBtn {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -20px;
+    right: -24px;
+}
+
+.cardBtn p {
+    text-align: center;
+}
+
+
+/* 按鈕控制會收合的區域 */
+.moreInfoTexts {
+    border: 1px solid green;
+    display: block;
+    margin: 9px 43px 22px 41px;
+}
+
+.moreTexts {
+    border: 1px solid blue;
+    margin-bottom: 20px;
+    font-family: 'Inter';
+    color: #5C5C5C;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* 地圖分佈區域 */
+
+

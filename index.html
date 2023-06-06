@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台灣原生香料地圖</title>
-    <link rel="stylesheet" type="text/css" href="src/index.css">
-
+    <link rel="stylesheet" type="text/css" href="./src/index.css">
+    <link rel="stylesheet" type="text/css" href="./src/cssReset.css">
+    <link rel="stylesheet" type="text/css" href="./src/navbar.css">
+    <link rel="stylesheet" type="text/css" href="./src/searchResult.css">
 </head>
 <body>
     <div class="documentLoaded" id="documentLoaded">
@@ -19,10 +21,10 @@
         </div>
 
         <!-- 搜尋欄位，要預留搜尋結果-->
-        <div class="container" id="searchContainer">
+        <div class="container searchArea" id="searchContainer">
             <!-- 下拉式選單 -->
-            <div class="container" >
-                <select id="species" name="species">
+            <div class="droplistBox" id="droplistBox">
+                <select id="speciesDroplist" name="species" class="speciesDroplist">
                     <option>今天想找什麼香料呢？</option>
                     <option value="山胡椒">山胡椒 / 馬告</option>
                     <option value="食茱萸">食茱萸 / 刺蔥</option>
@@ -37,7 +39,7 @@
                 </select>
             </div>
             <!-- 選單的結果 -->
-            <div class="container" id="resultContainer">
+            <div class="containers resultBlock" id="resultContainer">
                 <script src="./src/searchResult.js"></script>
                 <script>
                     generateSpeciesResult();
@@ -47,8 +49,9 @@
         </div>
 
         <!-- 地圖欄位，會引入 chart.js？ -->
-        <div class="container" id="mapContainer"></div>
+        <div class="container" id="mapContainer">放地圖的區域，測試用</div>
     </div>
-    
+    <!-- clearfix -->
+    <div class="clearfix"></div>
 </body>
 </html>
