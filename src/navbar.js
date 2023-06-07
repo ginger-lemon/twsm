@@ -15,9 +15,11 @@ function generateNavBar() {
 
     // 建立 logo 要用的圖片 *2
     const logopics = document.createElement('img');
-    logopics.src = "https://picsum.photos/67";
+    logopics.className = "logopics";
+    logopics.src = "./src/img/logoPic.svg";
     const logotitle = document.createElement('img');
-    logotitle.src = "https://picsum.photos/96/58";
+    logopics.className = "logotitle";
+    logotitle.src = "./src/img/logoTitle.svg";
 
     // 加入 logoDiv 內
     logoDiv.appendChild(logopics);
