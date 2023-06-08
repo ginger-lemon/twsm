@@ -1,123 +1,74 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>台灣原生香料地圖</title>
-        <link rel="stylesheet" type="text/css" href="src/index.css">
-        <link rel="stylesheet" type="text/css" href="src/cssReset.css">
-        <link rel="stylesheet" type="text/css" href="src/navbar.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣原生香料地圖</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/cssReset.css">
+</head>
 <body>
-    <div class="documentLoaded">
+    <div class="documentLoaded" id="documentLoaded">
         <!-- 導覽列 -->
-        <div id="navbarContainer">
+        <div class="container navbarContainer" id="navbarContainer">
+            
             <script src="./src/navbar.js"></script>
             <script>
                 generateNavBar();
             </script>
         </div>
 
-        <!-- 關於我們的內容欄位 -->
-        <div class="about container">
-            <div class="aboutTitle">
-                <h1>關於我們</h1>
-            </div>
-            <div class="aboutSection"></div>
-            <div class="aboutBox">
-                <h1>關於台灣原生香料地圖</h1>
-                <div class="cardBtn">∧</div>
-                <div class="aboutExtend">
-                    ::before
-                    <p>提供剛接觸台灣原生香料的人快速入門的簡單資訊。</p>
-                    <p>因緣際會下認識原住民經常使用的香料馬告（山胡椒），深受它別無黑胡椒的清香味道所吸引，
-                        希望可以認識並品嚐更多美味獨特的台灣原生香料。但在入門時，發現以「台灣原生香料」為主
-                        題的資訊大多集中在山胡椒、山肉桂、刺蔥與羅氏鹽膚木等四種較廣為人知的物種，想知道其他
-                        香料，必須從不同地方尋找蛛絲馬跡＊；反之，植物資料庫完善搜集各香料的物種資料，卻缺乏
-                        主題式的說明，不清楚香料名稱也無從下手。
-                        
-                        如果有人主題式彙整並簡單介紹台灣的香料種類，不僅節省許多毫無方向尋找資料的時間，還可
-                        以接觸或向其他感興趣的人推廣——抱持著當時找資料的心情開發此網站，如果可以解決和我有
-                        相同煩惱的人就好了！
-                        
-                        台灣原生香料地圖將使用台灣生物多樣性資料庫的資料，並結合其他平台針對該香料種類的介紹，
-                        呈現該香料的簡易資訊與分佈位置；後續將規劃增加其他功能。
-                        
-                        ＊台灣原生香料的物種已有資料庫記錄，但相關應用的研究則是這幾年才開始的。
-                        </p>
+        <!-- 關於我的物件 -->
+        <div class=" aboutArea">
+            <h2 class="aboutTitle">關於我們</h2>
+            <!-- 每一個可以收合的方塊，包含方塊與控制收合的按鈕 -->
+            <div class="section">
+                <div class="box card">
+                    <div class="box wrap">
+                        <h3>關於我們的標題</h3>
+                        <h4>副標題，會有前綴，記得加入偽元素</h4>
+                        <p>段落內容</p>
+                    </div>
                 </div>
+                <div class="box btn">btn</div>
             </div>
-            <div class="aboutBox">
-                <h1>資料來源</h1>
-                <div class="cardBtn">∧</div>
-                <div class="aboutExtend">
-                    ::before
-                    <p>提供剛接觸台灣原生香料的人快速入門的簡單資訊。</p>
-                    <p>因緣際會下認識原住民經常使用的香料馬告（山胡椒），深受它別無黑胡椒的清香味道所吸引，
-                        希望可以認識並品嚐更多美味獨特的台灣原生香料。但在入門時，發現以「台灣原生香料」為主
-                        題的資訊大多集中在山胡椒、山肉桂、刺蔥與羅氏鹽膚木等四種較廣為人知的物種，想知道其他
-                        香料，必須從不同地方尋找蛛絲馬跡＊；反之，植物資料庫完善搜集各香料的物種資料，卻缺乏
-                        主題式的說明，不清楚香料名稱也無從下手。
-                        
-                        如果有人主題式彙整並簡單介紹台灣的香料種類，不僅節省許多毫無方向尋找資料的時間，還可
-                        以接觸或向其他感興趣的人推廣——抱持著當時找資料的心情開發此網站，如果可以解決和我有
-                        相同煩惱的人就好了！
-                        
-                        台灣原生香料地圖將使用台灣生物多樣性資料庫的資料，並結合其他平台針對該香料種類的介紹，
-                        呈現該香料的簡易資訊與分佈位置；後續將規劃增加其他功能。
-                        
-                        ＊台灣原生香料的物種已有資料庫記錄，但相關應用的研究則是這幾年才開始的。
-                        </p>
+            <div class="section">
+                <div class="card">
+                    <div class="wrap">
+                        <h3>關於我們的標題</h3>
+                        <h4>副標題，會有前綴，記得加入偽元素</h4>
+                        <p>段落內容</p>
+                    </div>
                 </div>
+                <div class="btn">btn</div>
             </div>
-            <div class="aboutBox">
-                <h1>開發環境</h1>
-                <div class="cardBtn">∧</div>
-                <div class="aboutExtend">
-                    ::before
-                    <p>提供剛接觸台灣原生香料的人快速入門的簡單資訊。</p>
-                    <p>因緣際會下認識原住民經常使用的香料馬告（山胡椒），深受它別無黑胡椒的清香味道所吸引，
-                        希望可以認識並品嚐更多美味獨特的台灣原生香料。但在入門時，發現以「台灣原生香料」為主
-                        題的資訊大多集中在山胡椒、山肉桂、刺蔥與羅氏鹽膚木等四種較廣為人知的物種，想知道其他
-                        香料，必須從不同地方尋找蛛絲馬跡＊；反之，植物資料庫完善搜集各香料的物種資料，卻缺乏
-                        主題式的說明，不清楚香料名稱也無從下手。
-                        
-                        如果有人主題式彙整並簡單介紹台灣的香料種類，不僅節省許多毫無方向尋找資料的時間，還可
-                        以接觸或向其他感興趣的人推廣——抱持著當時找資料的心情開發此網站，如果可以解決和我有
-                        相同煩惱的人就好了！
-                        
-                        台灣原生香料地圖將使用台灣生物多樣性資料庫的資料，並結合其他平台針對該香料種類的介紹，
-                        呈現該香料的簡易資訊與分佈位置；後續將規劃增加其他功能。
-                        
-                        ＊台灣原生香料的物種已有資料庫記錄，但相關應用的研究則是這幾年才開始的。
-                        </p>
+            <div class="section">
+                <div class="card">
+                    <div class="wrap">
+                        <h3>關於我們的標題</h3>
+                        <h4>副標題，會有前綴，記得加入偽元素</h4>
+                        <p>段落內容</p>
+                    </div>
                 </div>
+                <div class=" btn">btn</div>
             </div>
-            <div class="aboutBox">
-                <h1>開發人員日記</h1>
-                <div class="cardBtn">∧</div>
-                <div class="aboutExtend">
-                    ::before
-                    <p>提供剛接觸台灣原生香料的人快速入門的簡單資訊。</p>
-                    <p>因緣際會下認識原住民經常使用的香料馬告（山胡椒），深受它別無黑胡椒的清香味道所吸引，
-                        希望可以認識並品嚐更多美味獨特的台灣原生香料。但在入門時，發現以「台灣原生香料」為主
-                        題的資訊大多集中在山胡椒、山肉桂、刺蔥與羅氏鹽膚木等四種較廣為人知的物種，想知道其他
-                        香料，必須從不同地方尋找蛛絲馬跡＊；反之，植物資料庫完善搜集各香料的物種資料，卻缺乏
-                        主題式的說明，不清楚香料名稱也無從下手。
-                        
-                        如果有人主題式彙整並簡單介紹台灣的香料種類，不僅節省許多毫無方向尋找資料的時間，還可
-                        以接觸或向其他感興趣的人推廣——抱持著當時找資料的心情開發此網站，如果可以解決和我有
-                        相同煩惱的人就好了！
-                        
-                        台灣原生香料地圖將使用台灣生物多樣性資料庫的資料，並結合其他平台針對該香料種類的介紹，
-                        呈現該香料的簡易資訊與分佈位置；後續將規劃增加其他功能。
-                        
-                        ＊台灣原生香料的物種已有資料庫記錄，但相關應用的研究則是這幾年才開始的。
-                        </p>
+            <div class=" section">
+                <div class=" card">
+                    <div class=" wrap">
+                        <h3>關於我們的標題</h3>
+                        <h4>副標題，會有前綴，記得加入偽元素</h4>
+                        <p>段落內容</p>
+                    </div>
                 </div>
+                <div class=" btn">btn</div>
             </div>
         </div>
+        
+
+
+            
     </div>
+
 </body>
 </html>

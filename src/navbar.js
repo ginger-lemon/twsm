@@ -8,22 +8,21 @@ function generateNavBar() {
     const navbarDiv = document.createElement('div');
     navbarDiv.className = 'navbarDiv';
 
+
     // 建立 logo 區域容器 
-    const logoDiv = document.createElement('a');
-    logoDiv.href = "./index.html"
+    const logoDiv = document.createElement('div');
     logoDiv.className = "logoDiv";
 
-    // 建立 logo 要用的圖片 *2
-    const logopics = document.createElement('img');
-    logopics.className = "logopics";
-    logopics.src = "./src/img/logoPic.svg";
-    const logotitle = document.createElement('img');
-    logopics.className = "logotitle";
-    logotitle.src = "./src/img/logoTitle.svg";
+    // 建立一個 a 裡面放圖片讓使用者點擊圖片可以連到首頁
+    const logolink = document.createElement('a');
+    logolink.href = "index.html";
+    const logo = document.createElement('img');
+    logo.src = "./src/img/logo.svg";
+
+    logolink.appendChild(logo);
 
     // 加入 logoDiv 內
-    logoDiv.appendChild(logopics);
-    logoDiv.appendChild(logotitle);
+    logoDiv.appendChild(logolink);
     
     
     // 建立網頁分頁容器
@@ -32,15 +31,12 @@ function generateNavBar() {
     // 建立分頁子項目
     const linkAbout = document.createElement('a');
     linkAbout.textContent = "關於我們";
-    linkAbout.className = "linkName";
     linkAbout.href = "./about.html"
     const linkGame = document.createElement('a');
     linkGame.textContent = "香料遊戲";
-    linkGame.className = "linkName";
     linkGame.href = "#";
     const linkRecipe = document.createElement('a');
     linkRecipe.textContent = "香料食譜";
-    linkRecipe.className = "linkRecipe";
     linkRecipe.href = "#";
 
     // 把分頁超連結加入分頁容器中
@@ -49,8 +45,8 @@ function generateNavBar() {
     tabDiv.appendChild(linkRecipe);
 
     // 導覽列最底部的 © 2023 GingerLemon.
-    const copyright = document.createElement('p');
-    copyright.textContent = "© 2023 GingerLemon.";
+    const copyright = document.createElement('div');
+    copyright.textContent = "©2023 GingerLemon.";
     copyright.className = "copyright";
 
     // 把全部節點加入到 navbarDiv 內

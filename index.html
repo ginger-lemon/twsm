@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台灣原生香料地圖</title>
-    <link rel="stylesheet" type="text/css" href="./src/index.css">
-    <link rel="stylesheet" type="text/css" href="./src/cssReset.css">
-    <link rel="stylesheet" type="text/css" href="./src/navbar.css">
-    <link rel="stylesheet" type="text/css" href="./src/searchResult.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/cssReset.css">
 </head>
 <body>
     <div class="documentLoaded" id="documentLoaded">
         <!-- 導覽列 -->
-        <div class="container" id="navbarContainer">
+        <div class="container navbarContainer" id="navbarContainer">
+            
             <script src="./src/navbar.js"></script>
             <script>
                 generateNavBar();
@@ -39,7 +38,7 @@
                 </select>
             </div>
             <!-- 選單的結果 -->
-            <div class="containers resultBlock" id="resultContainer">
+            <div class="resultBlock" id="resultContainer">
                 <script src="./src/searchResult.js"></script>
                 <script>
                     generateSpeciesResult();
@@ -50,7 +49,7 @@
 
         <!-- 地圖欄位，會引入 chart.js？ -->
         <div class="container" id="mapContainer">
-            放地圖的部分
+            
             <!-- 以下是用 SVG 繪製地圖的部分 -->
             <svg width="633" height="946" version="1.1" id="svg2606" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 850 1200"
