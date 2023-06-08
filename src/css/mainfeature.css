@@ -54,3 +54,20 @@
     margin-top: 45px;
 }
 
+/* 顯示學名、物種名稱、層級與別名 */
+.scientificName {
+    /* 範例： Litsea cubeba */
+    font-size: 24px;
+    line-height: 24px;
+    color: #489688;
+    font-weight: lighter;
+    font-style: italic;
+
+}
+.speciesName {
+    /* 範例：山胡椒 */
+    font-size: 32px;
+    line-height: 39px;
+    color: #2C655B;
+    font-weight: bold;
+}
