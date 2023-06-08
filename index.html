@@ -7,6 +7,7 @@
     <title>台灣原生香料地圖</title>
     <link rel="stylesheet" type="text/css" href="./src/css/main.css">
     <link rel="stylesheet" type="text/css" href="./src/css/cssReset.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/mainfunction.css">
 </head>
 <body>
     <div class="documentLoaded" id="documentLoaded">
@@ -22,7 +23,7 @@
         <!-- 搜尋欄位，要預留搜尋結果-->
         <div class="container searchArea" id="searchContainer">
             <!-- 下拉式選單 -->
-            <div class="droplistBox" id="droplistBox">
+            <div class="searchDroplist" id="searchDroplist">
                 <select id="speciesDroplist" name="species" class="speciesDroplist">
                     <option>今天想找什麼香料呢？</option>
                     <option value="山胡椒">山胡椒 / 馬告</option>
@@ -38,7 +39,7 @@
                 </select>
             </div>
             <!-- 選單的結果 -->
-            <div class="resultBlock" id="resultContainer">
+            <div class="resultContainer" id="resultContainer">
                 <script src="./src/searchResult.js"></script>
                 <script>
                     generateSpeciesResult();
@@ -482,12 +483,10 @@
             l-1.8,1.2l-2,0.7l-1.1,1.6l-2.3,0.5l-1.2,1.6l-4.1,1.8l-2.5,0.2l-2,0.7l-1.8,1.2l-4.8,0.5v2.7l1.1,2l2.3,0.7l1.4,1.6l0.2,2.5l3,6.8
             l2.3,1.6l1.6,2.1l2.3,0.5l1.4-1.2v2l1.6,1.8l7,1.8l5.4,4.6l5.2,0.4l4.6-2.3l2.5-0.2l1.1-1.8l0.7-2.1l-4.6-4.5v-4.8l-0.5-2.1l2.3-0.5
             l2.9-3l2.5,0.5l1.8,1.2l0.9,0.2l1.8-2.9l1.4-1.4L769,109L769,109z"/>
-</svg>
-
+            </svg>
 
         </div>
     </div>
-    <!-- clearfix -->
-    <div class="clearfix"></div>
+
 </body>
 </html>

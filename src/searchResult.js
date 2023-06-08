@@ -115,7 +115,7 @@ function generateSpeciesResult() {
     const speciesProperty = "分佈於台灣 1000 公尺上下中低海拔地區；開花期為 2-4 月，結果期為 6-8 月。"; // 測試用
     const speciesFeature = "有薑與胡椒的香氣，全株皆可食用。果實曬乾後成紫黑色，外型似黑胡椒粒。"; // 測試用
     const speciesApply = "花朵可泡茶、嫩葉可入菜，許多原住民族將種子當成去腥的香料或鹽巴的替代品。";
-    moreTexts01.textContent = "特性｜ " + speciesProperty;
+    moreTexts01.innerHTML = "特性｜ " + speciesProperty;
     moreTexts02.textContent = "特徵｜ " + speciesFeature;
     moreTexts03.textContent = "應用｜ " + speciesApply;
     

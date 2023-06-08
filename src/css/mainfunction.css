@@ -1,0 +1,56 @@
+/* 主要功能包含：下拉式選單、顯示搜尋結果 */
+
+/* 主要標示 */
+.searchArea {
+    border: 1px solid green;
+    display: block;
+}
+
+.searchArea > div {
+    border: 1px solid saddlebrown;
+}
+
+
+/* 下拉式選單 */
+/* 之後可能會需要配合 js 檔案產生選項 */
+.searchDroplist {
+    margin-top: 60px;
+}
+
+.speciesDroplist {
+    /* appearance: none; 移除原本外觀 */
+    width: 395px;
+    height: 60px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #5C5C5C;
+    font-size: 20px;
+    padding-left: 45px;
+}
+
+/* 選項部分 */
+.speciesDroplist option {
+    width: 395px;
+    height: 45px;
+    background-color: #fff;
+    border: 1px solid #000000;
+    font-size: 18px;
+}
+
+
+/* 資料顯示部分 */
+/* 定位 */
+.resultContainer {
+    margin-top: 60px;
+}
+
+.infoBox {
+    border: 1px solid saddlebrown;
+}
+
+.moreInfoBox {
+    border: 1px solid blue;
+    margin-top: 45px;
+}
+
