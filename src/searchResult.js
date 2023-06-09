@@ -1,4 +1,4 @@
-// 中間下拉式選單與結論部分
+// 中間下拉式選單與結論部分 DOM node
 
 
 // 下拉式選單
@@ -38,11 +38,18 @@ function generateSearchResult() {
             <p class="speciesName">山胡椒（js 測試）</p>
         </div> 
         <div class="tagsDiv">
-            <div class="tags">原生種（js 測試）</div>
+            <!-- 底下這一 -->
+            <div class="tags">
+                原生種（js 測試）
+            </div>
         </div> 
         <div class="classDiv">
             <p>
                <span>樟科（js 測試）</span> > <span>木子薑屬（js 測試）</span>
+            </p>
+            <p>
+                別名：<br/>
+                Litsea citrata Blume、Actinodaphne citrata (Blume) Hayata
             </p>
         </div> 
     `;
@@ -57,41 +64,42 @@ function generateSearchResult() {
                     width="120px"
                     height="120px"
                 />
-                <p>
-                    又稱：<br/>
-                    山雞椒、MaKao（泰雅族）、Maqrig（太魯閣族）、Mae’aew （賽夏族）。（js 測試）
-                </p>
+                <div>
+                    <p>又稱：</p>
+                    <p>
+                        山雞椒、MaKao（泰雅族）、Maqrig（太魯閣族）、Mae’aew （賽夏族）。（js 測試）
+                    </p>
+                </div>
             </div>
             <!-- 延展的部分 -->
-            <div class="extendanlePart">
+            <!-- display: inline-block; -->
+            <div class="extendablePart">
                 <div>
-                    <!-- display: block; -->
-                    <p><b>特性｜ </b></p>
-                    <p>分佈於台灣 1000 公尺上下中低海拔地區；
-                    開花期為 2-4 月，結果期為 6-8 月。（js 測試）</p>
+                    <p>特性｜</p>
+                    <p>分佈於台灣 1000 公尺上下中低海拔地區；開花期為 2-4 月，結果期為 6-8 月。（js 測試）</p>
                 </div>
                 <div>
-                    <!-- display: block; -->
-                    <p><b>特徵｜ </b></p>
-                    <p>有薑與胡椒的香氣，全株皆可食用。果實曬
-                    乾後成紫黑色，外型似黑胡椒粒。（js 測試）</p>
+                    <p>特徵｜</p>
+                    <p>有薑與胡椒的香氣，全株皆可食用。果實曬乾後成紫黑色，外型似黑胡椒粒。（js 測試）</p>
                 </div>
                 <div>
-                    <!-- display: block; -->
-                    <p><b>應用｜ </b></p>
-                    <p>花朵可泡茶、嫩葉可入菜，許多原住民族將
-                    種子當成去腥的香料或鹽巴的替代品。（js 測試）</p>
+                    <p>應用｜</p>
+                    <p>花朵可泡茶、嫩葉可入菜，許多原住民族將種子當成去腥的香料或鹽巴的替代品。（js 測試）</p>
                 </div>
             </div>
         </div>
         <div class="moreInfoBtn" width="48px" height="48px">
             <img 
-                src="https://picsum.photos/48"
+                src="./src/img/extendBtn.svg"
                 class="btn-extend"
+                width="27px"
+                height="13.5px"
             />
             <img 
-                src="https://picsum.photos/48"
+                src="./src/img/closeBtn.svg"
                 class="btn-close"
+                width="27px"
+                height="13.5px"
             />
         </div>
     `;
