@@ -52,6 +52,7 @@
 .moreInfoBox {
     border: 1px solid blue;
     margin-top: 45px;
+    display: block;
 }
 
 /* 顯示學名、物種名稱、層級與別名 */
@@ -71,3 +72,5 @@
     color: #2C655B;
     font-weight: bold;
 }
+
+

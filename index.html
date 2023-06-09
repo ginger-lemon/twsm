@@ -23,8 +23,8 @@
         <!-- 搜尋欄位，要預留搜尋結果-->
         <div class="container searchArea" id="searchContainer">
             <!-- 下拉式選單 -->
-            <div class="searchDroplist" id="searchDroplist">
-                <select id="speciesDroplist" name="species" class="speciesDroplist">
+            <div class="searchDroplist" id="droplistDiv">
+                <select id="searchList" name="spearchName" class="searchList">
                     <option>今天想找什麼香料呢？</option>
                     <option value="山胡椒">山胡椒 / 馬告</option>
                     <option value="食茱萸">食茱萸 / 刺蔥</option>
@@ -42,7 +42,7 @@
             <div class="resultContainer" id="resultContainer">
                 <script src="./src/searchResult.js"></script>
                 <script>
-                    generateSpeciesResult();
+                    generateSearchResult();
                 </script>
             </div>
             

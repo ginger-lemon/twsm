@@ -58,6 +58,18 @@ a {
 
 .logoDiv {
     margin-top: 56px;
+    position: relative;
+}
+
+.logoDiv::after{
+    position: absolute;
+    content: '';
+    top: 162px;
+    left: 26px;
+    width: 75px;
+    border: 1px solid #5C5C5C;
+    text-align: center;
+    
 }
 
 .logoDiv img {
