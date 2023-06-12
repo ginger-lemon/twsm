@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client";
 const root = createRoot(document.getElementById("app"));
 
 function App() {
-    return <h2>For testing react dev environment</h2>;
+    return <h2>For testing git tree clear</h2>;
 }
 
 root.render(<App />);
