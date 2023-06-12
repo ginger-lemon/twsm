@@ -214,7 +214,7 @@ select option {
 
 .extendablePart div p:first-child {
     /* border: 1px solid blue; */
-    margin-right: 8px;
+    /* margin-right: 8px; */
     width: 15%;
     display: inline-block;
 

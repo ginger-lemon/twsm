@@ -35,7 +35,7 @@ a {
 .navbarContainer {
     background: #ffffff;
     border: 2px solid #000000;
-    width: 150px;
+    width: 180px;
     height: 100vh;
     justify-items: center;
     flex: none;  /* 避免受到 .documentLoaded 的 flex 影響 */
