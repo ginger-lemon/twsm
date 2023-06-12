@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
@@ -12,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.22.1",
-    "@babel/preset-env": "^7.22.4",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^9.1.2",
