@@ -1,11 +1,13 @@
-// 導覽列元件
+import React from "react";
+
+
 
 // 取得要插入的容器
 function generateNavBar() {
     const container = document.getElementById('navbarContainer');
 
     // 建立 navbar 容器集中管理各項元素
-    const navbarDiv = document.createElement('div');
+    const navbarDiv = document.createElement('nav');
     navbarDiv.className = "navbarDiv";
 
     // 建立 navbar 底下的 HTML 標籤

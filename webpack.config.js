@@ -15,6 +15,7 @@ module.exports = {
     compress: true,
     port: 8080,
   },
+
   module: {
     rules: [
       {
@@ -35,15 +36,34 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.png/,
-        type: 'asset/resource'
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          }
+        ],
       },
-    ]
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },
+      {
+        test: /\.svg/,
+        use: {
+          loader: "svg-url-loader",
+          options: {
+            // make all svg images to work in IE
+            iesafe: true,
+          },
+        },
+      }
+    ],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html', // path to your HTML template
     }),
   ],
-};
+}
 
