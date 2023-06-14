@@ -6,12 +6,12 @@ function About() {
     return (
         <>
             <h2 className="about-title">關於我們</h2>
-            <section>
+            <div>
                 <AboutCard />
                 <AboutCard />
                 <AboutCard />
                 <AboutCard />
-            </section>
+            </div>
         </>
     );
 }

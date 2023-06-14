@@ -50,10 +50,10 @@ function NameField() {
             <p className="species-class">
                 樟科（var） {'>'} 木子薑屬（var）
             </p>
-            <p className="species-alias">
-                <b>別名：</b><br/>
-                Litsea citrata Blume、Actinodaphne citrata (Blume) Hayata （var）
-            </p>
+            <div className="species-alias">
+                <p>別名</p>
+                <p>Litsea citrata Blume、Actinodaphne citrata (Blume) Hayata （var）</p>
+            </div>
         </>
     );
 }
