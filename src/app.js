@@ -2,7 +2,7 @@
 import React from "react";
 import SearchSection from "./component/search-section.js";
 import NavBar from "./component/nav.js";
-// import AppearMap from "./component/appearmap.js";
+import AppearMap from "./component/appearmap.js";
 
 export default function App() {
     return (
@@ -10,7 +10,7 @@ export default function App() {
             <NavBar />
             <main>
                 <SearchSection/>
-                {/* <AppearMap/> */}
+                <AppearMap/>
             </main>
         </>
     );

@@ -93,7 +93,7 @@ function MoreInfoCard() {
             </div>
             <button className="btn-box">
                 {/* 如果卡片收合：extendBtn.svg；卡片展開：closeBtn.svg */}
-                <img src="/src/img/extendBtn.svg"/>
+                <img src="../src/img/extendBtn.svg"/>
             </button>
         </>
     );
