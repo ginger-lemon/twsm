@@ -1,7 +1,7 @@
 // 引入各種要用的 hook 
 import React from "react";
 import { ResetStyle } from "./styles/Styled.reset.js";
-import { GlobalStyles } from "./styles/Styled.global.js";
+import { GlobalStyles, StyledMain } from "./styles/Styled.global.js";
 import SearchSection from "./component/search-section.js";
 import NavBar from "./component/nav.js";
 import AppearMap from "./component/appearmap.js";
@@ -12,10 +12,10 @@ export default function App() {
             <ResetStyle />
             <GlobalStyles />
             <NavBar />
-            <main>
+            <StyledMain>
                 <SearchSection/>
                 <AppearMap/>
-            </main>
+            </StyledMain>
         </>
     );
 }

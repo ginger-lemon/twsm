@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
@@ -24,4 +25,10 @@ export const GlobalStyles = createGlobalStyle`
     ul {
         list-style-type:none;
     }
+`;
+
+export const StyledMain = styled.main`
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
 `;
