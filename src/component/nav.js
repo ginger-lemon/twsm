@@ -1,28 +1,29 @@
 import React from "react";
+import { StyledNav, StyledTabs, Logo, StyledFooter  } from "../styles/Styled.Navbar.js";
 
 function Tabs() {
     return (
-        <div>
+        <StyledTabs>
             <a href="#">關於我們</a>
             {/* 之後視情況增加 */}
-        </div>
+            <a href="#">香料食譜</a>
+        </StyledTabs>
     );
 }
 
 export default function NavBar() {
     return (
-        <nav>
-            <div>
+        <StyledNav>
+            <Logo>
                 <a href="#">
-                    <img 
-                        src="../src/img/logo.svg" 
-                        width="96px" 
-                        height="132px"
-                    />
-                </a>  
-            </div>
+                    <img src="../src/img/logo.svg" />
+                </a> 
+            </Logo> 
             <Tabs />
-            <p>© 2023 GingerLemon.</p>
-        </nav>
+            <StyledFooter>
+                <p>© 2023 GingerLemon.</p>
+            </StyledFooter>
+        </StyledNav>
+        
     );
 }

@@ -1,0 +1,78 @@
+/* 導覽功能列 */
+nav {
+    background: #ffffff;
+    border: 2px solid #000000;
+}
+
+.nav {
+    width: 180px;
+    height: 100vh;
+}
+
+/* nav 內元素定位 */
+/* .nav-item-center {
+    display: flex;
+    justify-items: center;
+} */
+
+.logo {
+    border: 1px solid red;
+    margin-top: 60px;
+    position: relative;
+    text-align: center;
+}
+
+.logo::after{
+    position: absolute;
+    content: '';
+    top: 150px;
+    left: 52.5px;
+    width: 75px;
+    border: 1px solid #5C5C5C;
+
+}
+
+.logo img {
+    width: 96px;
+    height: 132px;
+    text-align: center;
+}
+
+.tabs {
+    border: 1px solid red;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.tabs a{
+    display: block;
+    color: #000000;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.tabs a:hover {
+    color: #5C5C5C;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-item-position {
+    /* copyright 定位用的上一層設定 */
+    position: relative;
+}
+
+.copyright {
+    border: 1px solid red;
+    text-align: center;
+    /* copyright 定位用的設定 */
+    position: absolute;
+    bottom: 10px;
+    margin: 0 auto;
+}
+
+.copyright p {
+    font-size: 13px;
+}
+
+

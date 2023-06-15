@@ -1,4 +1,5 @@
 import React from "react";
+import aboutContent from "./data/aboutContent.js";
 
 // 預設只有第一個 card 會展開，其他都是預設關閉
 
