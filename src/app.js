@@ -2,7 +2,7 @@
 import React from "react";
 import { ResetStyle } from "./styles/Styled.reset.js";
 import { GlobalStyles, StyledContainer,StyledMain } from "./styles/Styled.global.js";
-import SearchSection from "./component/search-section.js";
+import SearchSection from "./component/search.result.js";
 import NavBar from "./component/nav.js";
 import AppearMap from "./component/appearmap.js";
 

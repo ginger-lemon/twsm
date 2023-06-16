@@ -1,4 +1,5 @@
 import React from "react";
+import { StyledSelect } from "../styles/Styled.Search.js";
 
 const optionData = [
     { name: "今天想找什麼香料呢？", value: "" },
@@ -17,19 +18,21 @@ const optionData = [
 function DropdownList() {
     return (
         <form>
-            <select id="droplist-search">
-                <option disabled selected value="">今天想找什麼香料呢？</option>
-                <option value="山胡椒">山胡椒 / 馬告</option>
-                <option value="食茱萸">食茱萸 / 刺蔥</option>
-                <option value="土肉桂">土肉桂</option>
-                <option value="土當歸">土當歸</option>
-                <option value="羅氏鹽膚木">羅氏鹽膚木</option>
-                <option value="大葉楠果實">大葉楠果實</option>
-                <option value="月桃">月桃</option>
-                <option value="艾草">艾草</option>
-                <option value="紫蘇">紫蘇</option>
-                <option value="大葉石龍尾">大葉石龍尾</option>
-            </select>
+            <StyledSelect>
+                <select name="select">
+                    <option disabled selected value="">今天想找什麼香料呢？</option>
+                    <option value="山胡椒">山胡椒 / 馬告</option>
+                    <option value="食茱萸">食茱萸 / 刺蔥</option>
+                    <option value="土肉桂">土肉桂</option>
+                    <option value="土當歸">土當歸</option>
+                    <option value="羅氏鹽膚木">羅氏鹽膚木</option>
+                    <option value="大葉楠果實">大葉楠果實</option>
+                    <option value="月桃">月桃</option>
+                    <option value="艾草">艾草</option>
+                    <option value="紫蘇">紫蘇</option>
+                    <option value="大葉石龍尾">大葉石龍尾</option>
+                </select>
+            </StyledSelect>
         </form>
     );
 }
@@ -99,13 +102,13 @@ function MoreInfoCard() {
     );
 }
 
-export default function SearchSection() {
+export default function SearchResult() {
     return (
-        <section>
+        <div>
             <DropdownList />
             <NameField />
             <MoreInfoCard />
-        </section>
+        </div>
     );
 }
 
