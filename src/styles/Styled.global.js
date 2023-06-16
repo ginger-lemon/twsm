@@ -28,7 +28,12 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const StyledMain = styled.main`
-    border: 1px solid red;
+    /* 讓 main 內部如有複數元件橫向定位 */
     display: flex;
-    flex-direction: row;
+    margin: 90px 72px 60px 60px;
+`;
+
+export const StyledContainer = styled.div`
+    /* 讓 nav 與 main 橫向排列 */
+    display: flex;
 `;

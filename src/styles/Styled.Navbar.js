@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
 export const StyledNav = styled.nav`
+    /* 關閉繼承的 flex 設定避免壓縮寬度 */
+    flex: none;
+    /* 以下設定 nav 樣式 */
     background-color: #ffffff;
     border: 2px solid #000000;
     width: 180px;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: block;
     text-align: center;
+    /* copyright 定位 */
     position: relative;
 `;
 
 export const Logo = styled.div`
     /* 定位 */
     margin-top: 60px;
-    /* 游標設定 */
-    cursor: pointer;
     position: relative;
 
     &:after {
