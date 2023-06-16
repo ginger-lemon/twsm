@@ -1,6 +1,30 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
+export const StyledMain = styled.main`
+    /* 讓 main 內部如有複數元件橫向定位 */
+    display: flex;
+    width: 1100px;
+    margin: 60px auto;
+    gap: 60px;
+
+
+    /* 最大寬度 < 1280px 時垂直排列 */
+    @media(max-width: 1280px) {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: block;
+        }
+    }
+`;
+
+export const StyledContainer = styled.div`
+    /* 讓 nav 與 main 橫向排列 */
+    display: flex;
+`;
+
 export const GlobalStyles = createGlobalStyle`
     html {
         box-sizing: border-box;
@@ -27,13 +51,3 @@ export const GlobalStyles = createGlobalStyle`
     }
 `;
 
-export const StyledMain = styled.main`
-    /* 讓 main 內部如有複數元件橫向定位 */
-    display: flex;
-    margin: 75px 72px 60px 60px;
-`;
-
-export const StyledContainer = styled.div`
-    /* 讓 nav 與 main 橫向排列 */
-    display: flex;
-`;

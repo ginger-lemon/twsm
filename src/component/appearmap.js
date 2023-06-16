@@ -1,8 +1,6 @@
 import React from "react";
 import { StyledMapContainer } from "../styles/Styled.map.js";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import "../css/map.css";
-
 
 export default function AppearMap() {
     return (

@@ -61,7 +61,7 @@ export const StyledMoreInfoCard = styled.div`
         border: 1px solid #000000;
         border-radius: 24px;
         position: absolute;
-        right: 5px;
+        right: -20px;
         top: -20px;
         cursor: pointer;
     }
@@ -167,7 +167,7 @@ export const StyledSelect = styled.div`
 `;
 
 export const StyledSearchResult = styled.div`
-    width: 540px;
-    margin-right: 60px;
+    /* width: 45%; */
+    /* margin-right: 60px; */
 `;
 

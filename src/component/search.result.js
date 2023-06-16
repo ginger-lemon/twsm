@@ -53,7 +53,7 @@ function MoreInfoCard() {
                             height="120px"
                         />
                         <div>
-                            <p>大家怎麼稱呼</p>
+                            <p>大家怎麼稱呼？</p>
                             <p>
                                 山雞椒、MaKao（泰雅族）、Maqrig（太魯閣族）、Mae’aew （賽夏族）。（var）
                             </p>
@@ -88,8 +88,9 @@ export default function SearchResult() {
     return (
         <StyledSearchResult>
             <DropdownList />
-                <BasicInfoCard />
-                <MoreInfoCard />
+            {/* 底下這兩個在連線前不會顯示 */}
+            <BasicInfoCard />
+            <MoreInfoCard />
         </StyledSearchResult>
     );
 }
