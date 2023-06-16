@@ -30,7 +30,7 @@ export const GlobalStyles = createGlobalStyle`
 export const StyledMain = styled.main`
     /* 讓 main 內部如有複數元件橫向定位 */
     display: flex;
-    margin: 90px 72px 60px 60px;
+    margin: 75px 72px 60px 60px;
 `;
 
 export const StyledContainer = styled.div`

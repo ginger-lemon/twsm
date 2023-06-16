@@ -1,11 +1,13 @@
 import React from "react";
+import { StyledMapContainer } from "../styles/Styled.map.js";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import "../css/map.css";
 
 
 export default function AppearMap() {
     return (
-        <MapContainer
+        <StyledMapContainer>
+            <MapContainer
             center={[23.697809, 120.960518]} 
             zoom={8} 
         >
@@ -14,5 +16,7 @@ export default function AppearMap() {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
         </MapContainer>
+        </StyledMapContainer>
+        
     );
 }
