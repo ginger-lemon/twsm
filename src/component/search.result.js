@@ -1,13 +1,14 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { StyledSearchResult, StyledBasicInfoCard, StyledMoreInfoCard, StyledSelect, Tag, RowTexts, FixedTexts, ExtendTexts, CardContent } from "../styles/Styled.Search.js";
 
 // 下拉式選單，會傳資料給 API 去取得 JSON 顯示在下方的欄位
-function DropdownList() {
+function DropdownList({ onChange }) {
     return (
         <form>
             <StyledSelect>
                 {/* TODO: option 無法再展開時固定在 select 下方 */}
-                <select name="select" offset="-60px">
+                <select onChange={onChange}>
                     {optionData.map(
                         ({name, value}) => (
                         <option key={name} value={value}>{name}</option>
@@ -85,12 +86,93 @@ function MoreInfoCard() {
 }
 
 export default function SearchResult() {
+    const [species, setSpecies] = useState('');
+    const [mapData, setMapData] = useState('');
+    const [infoData, setInfoData] = useState('');
+
+    // 連線到 API 取得物種資料：直接用 fetch 連線會有 CORS 的錯誤
+    useEffect(() => {
+        let isSubscibed = true;
+
+        async function getInfoData(species) {
+            try {
+                const response = await fetch(`https://www.tbn.org.tw/api/v25/taxon?name=${species}`);
+                if (!isSubscibed) {
+                    return;
+                }
+                const data = await response.json();
+                console.log(response);
+                setInfoData(data);
+                console.log('連線到 API 並抓取資料');
+            } catch (error) {
+                console.error('錯誤訊息： ' + error);
+            }
+        };
+
+        if (species !== '') {
+            getInfoData(species);
+        }
+
+        return () => {
+            isSubscibed = false;
+            setInfoData('');
+        };
+    }, [species]);
+
+
+
+    // // 連線到 API 取得物種地圖：這個應該不會是放在這裡⋯⋯
+    // useEffect(() => {
+    //     // 處理取得 API 回傳資料延遲期間又按到下拉式選單的重複連線
+    //     let isSubscibed = true;
+        
+    //     async function getMapData(species) {
+    //         try {
+    //             const response = await fetch(`https://map.tbn.org.tw/geoserver/wfs?request=getFeature&typeName=species:occurrence&CQL_FILTER=scientificname='${species}'&outputformat=json`);
+    //             // 檢查是否訂閱，如果沒有訂閱則中斷此非同步函數
+    //             if (!isSubscibed) {
+    //                 return;
+    //             }
+    //             console.log('抓取地圖資料成功');
+    //             const data = await response.json();
+    //             setMapData(data);
+    //             console.log(data);
+    //             console.log('取得地圖資料並存到 setMapData 內');
+    //         } catch (error){
+    //             console.log('連線失敗： ' + error );
+    //         }
+    //     }
+
+    //     if (species !== '') {
+    //         getMapData(species);
+    //     }
+
+    //     // 取消上一次的訂閱
+    //     return () => {
+    //         isSubscibed = false;
+    //         // 刪除前一次的 Mapdata 
+    //         setMapData('');
+    //     };
+    // },[species]);
+    
+    function handleChange(e) {
+        const newSpecies = e.target.value;
+        if (newSpecies !== species) {
+            console.log('我現在選到新的香料：' + newSpecies);
+            setSpecies(newSpecies);
+        }
+    }
+
     return (
         <StyledSearchResult>
-            <DropdownList />
-            {/* 底下這兩個在連線前不會顯示 */}
-            <BasicInfoCard />
-            <MoreInfoCard />
+            <DropdownList onChange={handleChange}/>
+            {species === '' ? '' : (
+                <>
+                    <BasicInfoCard />
+                    <MoreInfoCard />
+                </>
+            )} 
+           
         </StyledSearchResult>
     );
 }
@@ -99,12 +181,14 @@ export default function SearchResult() {
 const optionData = [
     { name: "今天想找什麼香料呢？", value: "" },
     { name: "山胡椒（馬告）", value: "山胡椒" },
-    { name: "食茱萸（刺蔥）", value: "食茱萸" },
-    { name: "土肉桂", value: "土肉桂" },
-    { name: "土當歸", value: "土當歸" },
-    { name: "羅氏鹽膚木", value: "羅氏鹽夫木" },
-    { name: "大葉楠果實", value: "大葉楠果實" },
-    { name: "月桃", value: "月桃" },
-    { name: "艾草", value: "艾草" },
-    { name: "大葉石龍尾", value: "大葉石龍尾" },
+    { name: "食茱萸（刺蔥）", value: "Zanthoxylum ailanthoides" },
+    { name: "土肉桂", value: "Cinnamomum osmophloeum" },
+    { name: "土當歸", value: "Aralia cordata" },
+    { name: "羅氏鹽膚木", value: "Rhus javanica" },
+    { name: "大葉楠（果實）", value: "Machilus kusanoi" },
+    { name: "月桃", value: "Alpinia zerumbet" },
+    { name: "艾草", value: "Artemisia indica" },
+    { name: "大葉石龍尾", value: "Limnophila rugosa" },
 ];
+
+// Litsea cubeba
