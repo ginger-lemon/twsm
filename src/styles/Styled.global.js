@@ -23,6 +23,7 @@ export const StyledMain = styled.main`
 export const StyledContainer = styled.div`
     /* 讓 nav 與 main 橫向排列 */
     display: flex;
+    gap: 30px;
 `;
 
 export const GlobalStyles = createGlobalStyle`

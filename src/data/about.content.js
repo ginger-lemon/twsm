@@ -11,13 +11,13 @@ const aboutContent = [
         id: 2,
         title: "資料來源",
         hightlignt: "",
-        texts: "台灣生態多樣性網站",
+        text: ["台灣生態多樣性網站", "認識植物"]
     },
     {
         id: 3,
         title: "開發環境",
         hightlignt: "",
-        texts: "React 、 styled-cpmponebts 、 react-leaflet 、 webpack 、 ",
+        texts: ["React", "styled-cpmponents", "leaf.js", "react-leaflet", "webpack" ],
     },
     {
         id: 4,

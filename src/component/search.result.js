@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { StyledSearchResult, StyledBasicInfoCard, StyledMoreInfoCard, StyledSelect, Tag, RowTexts, FixedTexts, ExtendTexts, CardContent } from "../styles/Styled.Search.js";
+import { fetchData } from "../data/infoApi.js";
 
 // 下拉式選單，會傳資料給 API 去取得 JSON 顯示在下方的欄位
 function DropdownList({ onChange }) {
@@ -20,28 +21,37 @@ function DropdownList({ onChange }) {
 }
 
 // 中間區段，顯示學名、中文名稱、分類階層、別名、特別標記
-function BasicInfoCard() {
+function BasicInfoCard({infoData}) {
+    const { alias } = infoData;
+    const { classes } = infoData;
+    const { labels } = infoData;
     return (
         <StyledBasicInfoCard>
             {/* 香料的學名與中文名稱 */}
-            <p className="species-latin">Litsea cubeba（var）</p>
-            <p className="species-bold">山胡椒（var）</p>
+            <p className="species-latin">{infoData.scientificname}</p>
+            <p className="species-bold">{infoData.name}</p>
             {/* 原生種/瀕危/水生/陸生等標籤 */}
             <div className="tags-block">
-                <Tag>原生種</Tag>
-                <Tag>陸生</Tag>
+                {labels && labels.map((labels, index) => (<Tag key={index}>{labels}</Tag>))}
             </div>
-            <p>
-                樟科（var） {'>'} 木子薑屬（var）
-            </p>
+            {classes && <p>{classes.join(' > ')}</p>}
             <p>別名：</p>
-            <p>Litsea citrata Blume、Actinodaphne citrata (Blume) Hayata （var）</p>
+            {alias && <p>{alias.join('、')}</p>}
          </StyledBasicInfoCard>
     );
 }
 
 // 最下方更多資訊
-function MoreInfoCard() {
+function MoreInfoCard({infoData}) {
+    const [isExtend, setIsExtend] = useState(false);
+    const { calledName } = infoData;
+
+    function handleExtend() {
+        console.log('按到按鈕');
+        isExtend ? (console.log('展開')) : (console.log('收合'));
+        setIsExtend(!isExtend);
+    }
+
     return (
         <StyledMoreInfoCard>
             <div className="infocard">
@@ -49,38 +59,43 @@ function MoreInfoCard() {
                 {/* 卡片收合展開都固定的內容 */}
                     <FixedTexts>
                         <img 
-                            src="https://picsum.photos/120"
+                            // TODO: 圖片比例跑掉
+                            src={infoData.imgUrl}
                             width="120px"
                             height="120px"
                         />
                         <div>
                             <p>大家怎麼稱呼？</p>
-                            <p>
-                                山雞椒、MaKao（泰雅族）、Maqrig（太魯閣族）、Mae’aew （賽夏族）。（var）
-                            </p>
+                            {calledName && <p>{calledName.join('、')}</p>}
                         </div>
                     </FixedTexts>
 
                     {/* 卡片展開才會出現的部分 */}
-                    <RowTexts>
-                        <p>特性｜</p>
-                        <p>分佈於台灣 1000 公尺上下中低海拔地區；開花期為 2-4 月，結果期為 6-8 月。</p>
-                    </RowTexts>
-                    <RowTexts>
-                        <p>特徵｜</p>
-                        <p>有薑與胡椒的香氣，全株皆可食用。果實曬乾後成紫黑色，外型似黑胡椒粒。（js 測試）</p>
-                    </RowTexts>
-                    <RowTexts>
-                        <p>應用｜</p>
-                        <p>花朵可泡茶、嫩葉可入菜，許多原住民族將種子當成去腥的香料或鹽巴的替代品。（js 測試）</p>
-                    </RowTexts>
+                    <div style={{display: isExtend? 'block' : 'none'}}>
+                        <RowTexts >
+                            <p>特性｜</p>
+                            <p>{infoData.behavior}</p>
+                        </RowTexts>
+                        <RowTexts>
+                            <p>特徵｜</p>
+                            <p>{infoData.feature}</p>
+                        </RowTexts>
+                        <RowTexts>
+                            <p>應用｜</p>
+                            <p>{infoData.apply}</p>
+                        </RowTexts>
+                    </div>
                 </CardContent>
             </div>
+
+            {isExtend ? 
+                (<button type="button" className="btn-box" onClick={handleExtend}>
+                    <img src="../src/img/closeBtn.svg"/>
+                </button>) :
+                (<button type="button" className="btn-box" onClick={handleExtend}>
+                    <img src="../src/img/extendBtn.svg"/>
+                </button>)}
             
-            <button type="button" className="btn-box">
-                {/* 如果卡片收合：extendBtn.svg；卡片展開：closeBtn.svg */}
-                <img src="../src/img/extendBtn.svg"/>
-            </button>
         </StyledMoreInfoCard>
     );
 }
@@ -90,35 +105,29 @@ export default function SearchResult() {
     const [mapData, setMapData] = useState('');
     const [infoData, setInfoData] = useState('');
 
-    // 連線到 API 取得物種資料：直接用 fetch 連線會有 CORS 的錯誤
+    // 連線到 API 取得物種資料（先連到資料夾內模擬的 API）
     useEffect(() => {
         let isSubscibed = true;
 
-        async function getInfoData(species) {
-            try {
-                const response = await fetch(`https://www.tbn.org.tw/api/v25/taxon?name=${species}`);
-                if (!isSubscibed) {
-                    return;
-                }
-                const data = await response.json();
-                console.log(response);
-                setInfoData(data);
-                console.log('連線到 API 並抓取資料');
-            } catch (error) {
-                console.error('錯誤訊息： ' + error);
-            }
-        };
-
-        if (species !== '') {
-            getInfoData(species);
+        function getInfoData(species) {
+            const data = fetchData(species);
+            if (!isSubscibed) {
+                return;
+            }; 
+            setInfoData(data);
+            console.log(data);
         }
 
-        return () => {
+        if (species !== "") {
+            getInfoData(species);
+        }
+        
+        return ()=> {
             isSubscibed = false;
             setInfoData('');
-        };
-    }, [species]);
+        }
 
+    }, [species]);
 
 
     // // 連線到 API 取得物種地圖：這個應該不會是放在這裡⋯⋯
@@ -168,8 +177,8 @@ export default function SearchResult() {
             <DropdownList onChange={handleChange}/>
             {species === '' ? '' : (
                 <>
-                    <BasicInfoCard />
-                    <MoreInfoCard />
+                    <BasicInfoCard infoData={infoData}/>
+                    <MoreInfoCard infoData={infoData}/>
                 </>
             )} 
            
@@ -180,15 +189,12 @@ export default function SearchResult() {
 
 const optionData = [
     { name: "今天想找什麼香料呢？", value: "" },
-    { name: "山胡椒（馬告）", value: "山胡椒" },
+    { name: "山胡椒（馬告）", value: "Litsea cubeba" },
     { name: "食茱萸（刺蔥）", value: "Zanthoxylum ailanthoides" },
     { name: "土肉桂", value: "Cinnamomum osmophloeum" },
     { name: "土當歸", value: "Aralia cordata" },
     { name: "羅氏鹽膚木", value: "Rhus javanica" },
     { name: "大葉楠（果實）", value: "Machilus kusanoi" },
     { name: "月桃", value: "Alpinia zerumbet" },
-    { name: "艾草", value: "Artemisia indica" },
     { name: "大葉石龍尾", value: "Limnophila rugosa" },
 ];
-
-// Litsea cubeba

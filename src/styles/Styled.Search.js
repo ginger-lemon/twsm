@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const FixedTexts = styled.div`
     display: flex;
     flex-direction: row;
