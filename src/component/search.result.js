@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { StyledSearchResult, StyledBasicInfoCard, StyledMoreInfoCard, StyledSelect, Tag, RowTexts, FixedTexts, ExtendTexts, CardContent } from "../styles/Styled.Search.js";
+import { StyledSearchResult, StyledBasicInfoCard, StyledMoreInfoCard, StyledSelect, Tag, RowTexts, FixedTexts, CardContent } from "../styles/Styled.Search.js";
 import { fetchData } from "../data/infoApi.js";
 
 // 下拉式選單，會傳資料給 API 去取得 JSON 顯示在下方的欄位
@@ -100,9 +100,7 @@ function MoreInfoCard({infoData}) {
     );
 }
 
-export default function SearchResult() {
-    const [species, setSpecies] = useState('');
-    const [mapData, setMapData] = useState('');
+export default function SearchResult({ onChange, species }) {
     const [infoData, setInfoData] = useState('');
 
     // 連線到 API 取得物種資料（先連到資料夾內模擬的 API）
@@ -129,52 +127,9 @@ export default function SearchResult() {
 
     }, [species]);
 
-
-    // // 連線到 API 取得物種地圖：這個應該不會是放在這裡⋯⋯
-    // useEffect(() => {
-    //     // 處理取得 API 回傳資料延遲期間又按到下拉式選單的重複連線
-    //     let isSubscibed = true;
-        
-    //     async function getMapData(species) {
-    //         try {
-    //             const response = await fetch(`https://map.tbn.org.tw/geoserver/wfs?request=getFeature&typeName=species:occurrence&CQL_FILTER=scientificname='${species}'&outputformat=json`);
-    //             // 檢查是否訂閱，如果沒有訂閱則中斷此非同步函數
-    //             if (!isSubscibed) {
-    //                 return;
-    //             }
-    //             console.log('抓取地圖資料成功');
-    //             const data = await response.json();
-    //             setMapData(data);
-    //             console.log(data);
-    //             console.log('取得地圖資料並存到 setMapData 內');
-    //         } catch (error){
-    //             console.log('連線失敗： ' + error );
-    //         }
-    //     }
-
-    //     if (species !== '') {
-    //         getMapData(species);
-    //     }
-
-    //     // 取消上一次的訂閱
-    //     return () => {
-    //         isSubscibed = false;
-    //         // 刪除前一次的 Mapdata 
-    //         setMapData('');
-    //     };
-    // },[species]);
-    
-    function handleChange(e) {
-        const newSpecies = e.target.value;
-        if (newSpecies !== species) {
-            console.log('我現在選到新的香料：' + newSpecies);
-            setSpecies(newSpecies);
-        }
-    }
-
     return (
         <StyledSearchResult>
-            <DropdownList onChange={handleChange}/>
+            <DropdownList onChange={onChange}/>
             {species === '' ? '' : (
                 <>
                     <BasicInfoCard infoData={infoData}/>
