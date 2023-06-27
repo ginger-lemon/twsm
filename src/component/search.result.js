@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { StyledSearchResult, StyledBasicInfoCard, StyledMoreInfoCard, StyledSelect, Tag, RowTexts, FixedTexts, CardContent } from "../styles/Styled.Search.js";
-import { fetchData } from "../data/infoApi.js";
 
 // 下拉式選單，會傳資料給 API 去取得 JSON 顯示在下方的欄位
 function DropdownList({ onChange }) {
@@ -25,6 +24,7 @@ function BasicInfoCard({infoData}) {
     const { alias } = infoData;
     const { classes } = infoData;
     const { labels } = infoData;
+
     return (
         <StyledBasicInfoCard>
             {/* 香料的學名與中文名稱 */}
@@ -47,8 +47,8 @@ function MoreInfoCard({infoData}) {
     const { calledName } = infoData;
 
     function handleExtend() {
-        console.log('按到按鈕');
-        isExtend ? (console.log('展開')) : (console.log('收合'));
+        // console.log('按到按鈕');
+        // isExtend ? (console.log('展開')) : (console.log('收合'));
         setIsExtend(!isExtend);
     }
 
@@ -100,32 +100,7 @@ function MoreInfoCard({infoData}) {
     );
 }
 
-export default function SearchResult({ onChange, species }) {
-    const [infoData, setInfoData] = useState('');
-
-    // 連線到 API 取得物種資料（先連到資料夾內模擬的 API）
-    useEffect(() => {
-        let isSubscibed = true;
-
-        function getInfoData(species) {
-            const data = fetchData(species);
-            if (!isSubscibed) {
-                return;
-            }; 
-            setInfoData(data);
-            console.log(data);
-        }
-
-        if (species !== "") {
-            getInfoData(species);
-        }
-        
-        return ()=> {
-            isSubscibed = false;
-            setInfoData('');
-        }
-
-    }, [species]);
+export default function SearchResult({ onChange, species, infoData }) {
 
     return (
         <StyledSearchResult>

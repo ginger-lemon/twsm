@@ -1,5 +1,5 @@
-export function fetchData(species) {
-    if (species === "Litsea cubeba") {
+export function fetchData(value) {
+    if (value === "Litsea cubeba") {
         console.log("成功連線抓取山胡椒資料");
         const responseData = {
             UUID: "a7348813-fff4-4812-ade1-cb7c83d6624c",
@@ -17,7 +17,7 @@ export function fetchData(species) {
         };
         return responseData;
 
-    } else if (species === "Zanthoxylum ailanthoides") {
+    } else if (value === "Zanthoxylum ailanthoides") {
         console.log("成功連線抓取食茱萸資料");
         const responseData = {
             UUID: "d028a466-95d7-42a4-b79e-a8767fa9b261",
@@ -32,10 +32,10 @@ export function fetchData(species) {
             behavior: "分佈於臺灣全島低地至海拔 1600 公尺山區，尤其是火燒森林後的新生地與崩落裸地；開花期為 8~9 月，結果期為 10~12 月。",
             feature: "1~2 月會長出嫩芽，嫩芽具有強烈香氣；葉柄與心部長成紅色，全株有刺且有香蔥味，枝幹上長滿瘤刺。",
             apply: "嫩葉或幼苗部分可食用，排灣族經常將嫩葉代替香料加入湯中調味；其他部分可作為藥用材料。"
-        }
+        };
         return responseData;
 
-    } else if (species === "Cinnamomum osmophloeum") {
+    } else if (value === "Cinnamomum osmophloeum") {
         console.log("成功連線抓取土肉桂資料");
         const responseData = {
             UUID: "fbf16533-6d06-4262-beda-aa485ce236cc",
@@ -50,10 +50,10 @@ export function fetchData(species) {
             behavior: "常見於台灣海拔 500~1500 公尺向陽陡峭山坡處；開花期為 6~9 月，結果期為 8~10 月。",
             feature: "外觀像胡氏肉桂，但枝幹表面平滑具有強烈的肉桂香氣；果實成熟後便紫黑色。",
             apply: "樹皮可代替肉桂，但台灣多用其葉子煮湯或泡茶；鄒族人將樹皮作為零食、阿美族將果實搭配檳榔食用；樹皮亦有藥用療效。"
-        }
+        };
         return responseData;
 
-    } else if (species === "Aralia cordata") {
+    } else if (value === "Aralia cordata") {
         console.log("成功連線抓取土當歸資料");
         const responseData = {
             UUID: "033eaf01-963d-4c73-bd91-e34704ecd7e6",
@@ -68,10 +68,10 @@ export function fetchData(species) {
             behavior: "分佈於台灣海拔 1800~2800 公尺山區草叢；開花期為 6~9 月，結果期為 8~10 月。",
             feature: "全株高 1~2 公尺，葉長 30~50 公分，卵形、長橢圓形或新型，邊緣鋸齒狀。",
             apply: "原住民使用嫩葉入菜煮湯增添香氣；整株皆可食用，根、莖具藥用療效。"
-        }
+        };
         return responseData;
 
-    } else if (species === "Rhus javanica") {
+    } else if (value === "Rhus javanica") {
         console.log("成功連線抓取羅氏鹽膚木資料");
         const responseData = {
             UUID: "b830a4e3-225d-4222-b103-b0db715bb8e4",
@@ -86,10 +86,10 @@ export function fetchData(species) {
             behavior: "生長於台灣 2000 公尺以下中低海拔向陽開闊地的叢林內，全台各地皆可見。",
             feature: "落葉性小喬木，花生長於枝頂，果實成熟時為成紅色。",
             apply: "原住民將果實外側包裹乳脂狀物作為食鹽替代物，嫩葉可做野菜食用；其他部位具藥用療效。"
-        }
+        };
         return responseData;
 
-    } else if (species === "Machilus kusanoi") {
+    } else if (value === "Machilus kusanoi") {
         console.log("成功連線抓取大葉楠果時資料");
         const responseData = {
             UUID: "e540b1b3-77cd-41f9-a207-737259c577d3",
@@ -104,10 +104,10 @@ export function fetchData(species) {
             behavior: "分佈於台灣全島中底海拔闊葉林的溪谷與潮濕處。",
             feature: "樹高可達 40 公尺；果實直徑約 1~1.5 公分，成熟時為紫黑色。",
             apply: "樹皮多作為蚊香、線香材料，魯凱族會食用其果實；果實曬乾後研磨可增添食材鮮味。"
-        }
+        };
         return responseData;
 
-    } else if (species === "Alpinia zerumbet") {
+    } else if (value === "Alpinia zerumbet") {
         console.log("成功連線抓取月桃資料");
         const responseData = {
             UUID: "b649a43f-0566-452a-a650-d93045896c27",
@@ -122,10 +122,10 @@ export function fetchData(species) {
             behavior: "分佈於台灣中低海拔平地與山區、蘭嶼、綠島。台灣生長的 18 種月桃中有 12 種為台灣特有種。",
             feature: "全株高 1~3 公尺，葉長 60~70 公分、寬 10~15 公分，花成漏斗狀向下生長。",
             apply: "其葉子多用來包粽子；泰雅族會將葉子、花、種子入菜，烹調方式包含水煮、涼拌與燒烤。"
-        }
+        };
         return responseData;
 
-    } else if (species === "Limnophila rugosa") {
+    } else if (value === "Limnophila rugosa") {
         console.log("成功連線抓取大葉石龍尾資料");
         const responseData = {
             UUID: "1d8c9567-3652-4ea6-a19c-2a3ebb1e01ea",
@@ -140,9 +140,12 @@ export function fetchData(species) {
             behavior: "分佈於台灣低海拔沼澤與稻田中；花期為 9~12 月。",
             feature: "花冠為粉紅色或紫色，葉子對生、呈現卵形、橢圓形，味道與八角相似。",
             apply: "用於滷肉、製作點心與佐料；其葉子也是原住民製作酒麴的材料之一。"
-        }
+        };
         return responseData;
-    }  
+    }  else {
+        const responseData = "好像有問題";
+        return responseData;
+    }
     
 } 
 
