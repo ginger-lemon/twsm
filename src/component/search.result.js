@@ -89,7 +89,7 @@ function MoreInfoCard({infoData}) {
                 </CardContent>
             </div>
 
-            {isExtend ? 
+            {isExtended ? 
                 (<button type="button" className="btn-box" onClick={handleExtend}>
                     <img src="../src/img/closeBtn.svg"/>
                 </button>) :

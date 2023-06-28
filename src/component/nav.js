@@ -13,7 +13,7 @@ export default function NavBar() {
     return (
         <StyledNav>
             <Logo>
-                <a href="#">
+                <a href="/dist/index.html">
                     <img src="../src/img/logo.svg" />
                 </a> 
             </Logo> 
