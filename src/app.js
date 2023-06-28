@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ResetStyle } from "./styles/Styled.reset.js";
 import { GlobalStyles, StyledContainer,StyledMain } from "./styles/Styled.global.js";
 import SearchSection from "./component/search.result.js";
@@ -14,7 +13,7 @@ export default function App() {
     const [isLoading, setIsLoading] = useState(false);
 
     // 下拉式選單的事件處理函數
-    function handleChange(e) {
+    function handleSpeciesChange(e) {
         const newSpecies = e.target.value;
         if (newSpecies !== species) {
             console.log('我現在選到新的香料' + newSpecies);
@@ -29,7 +28,7 @@ export default function App() {
             console.log('已取得模擬API 資料');
             setInfoData(data);
         } catch (error) {
-            console.error('模擬 API 發生錯誤：' , error)
+            console.error('模擬 API 發生錯誤：' , error);
         }
     }
 
@@ -70,6 +69,7 @@ export default function App() {
         }
     }, [species]);
 
+
     return (
         <>
             <ResetStyle />
@@ -80,14 +80,13 @@ export default function App() {
                 <StyledMain>
                     <SearchSection 
                         infoData={infoData}
-                        onChange={handleChange}
+                        onChange={handleSpeciesChange}
                         species={species}
                         isLoading={isLoading}
                     />
                     <AppearMap
                         isLoading={isLoading}
-                        mapData={mapData}
-                        species={species}                    
+                        mapData={mapData}                 
                     />
                 </StyledMain>
             </StyledContainer>

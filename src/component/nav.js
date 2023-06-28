@@ -5,8 +5,6 @@ function Tabs() {
     return (
         <StyledTabs>
             <a href="#">關於我們</a>
-            {/* 之後視情況增加 */}
-            <a href="#">香料食譜</a>
         </StyledTabs>
     );
 }

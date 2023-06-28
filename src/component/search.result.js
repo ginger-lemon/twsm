@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { StyledSearchResult, StyledBasicInfoCard, StyledMoreInfoCard, StyledSelect, Tag, RowTexts, FixedTexts, CardContent } from "../styles/Styled.Search.js";
 
 // 下拉式選單，會傳資料給 API 去取得 JSON 顯示在下方的欄位
@@ -46,11 +46,11 @@ function BasicInfoCard({infoData}) {
 
 // 最下方更多資訊
 function MoreInfoCard({infoData}) {
-    const [isExtend, setIsExtend] = useState(false);
+    const [isExtended, setIsExtend] = useState(false);
     const { calledName } = infoData;
 
     function handleExtend() {
-        setIsExtend(!isExtend);
+        setIsExtend(!isExtended);
     }
 
     return (
@@ -72,7 +72,7 @@ function MoreInfoCard({infoData}) {
                     </FixedTexts>
 
                     {/* 卡片展開才會出現的部分 */}
-                    <div style={{display: isExtend? 'block' : 'none'}}>
+                    <div style={{display: isExtended? 'block' : 'none'}}>
                         <RowTexts >
                             <p>特性｜</p>
                             <p>{infoData.behavior}</p>
