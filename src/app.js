@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { ResetStyle } from "./styles/Styled.reset.js";
 import { GlobalStyles, StyledContainer,StyledMain } from "./styles/Styled.global.js";
@@ -11,12 +11,11 @@ export default function App() {
     const [species, setSpecies] = useState('');
     const [infoData, setInfoData] = useState('');
     const [mapData, setMapData] = useState();
+    const [isLoading, setIsLoading] = useState(false);
 
     // 下拉式選單的事件處理函數
     function handleChange(e) {
         const newSpecies = e.target.value;
-        fetchInfoData(newSpecies);
-        fetchMapData(newSpecies);
         if (newSpecies !== species) {
             console.log('我現在選到新的香料' + newSpecies);
             setSpecies(newSpecies);
@@ -34,18 +33,42 @@ export default function App() {
         }
     }
 
+    useEffect(() => {
+        let isSubscirbed = true;
+        if (species !== '') {
+            fetchInfoData(species);
+        }
+        return () => {
+            isSubscirbed = false;
+            setInfoData('');
+        }
+    }, [species]);
+
     // 處理連線到第三方 API 取得地圖資料的邏輯
     async function fetchMapData(value) {
+        setIsLoading(true);
         try {
             const response = await fetch(`https://map.tbn.org.tw/geoserver/wfs?request=getFeature&typeName=species:occurrence&CQL_FILTER=scientificname='${value}'&outputformat=json`);
             const data = await response.json();
-            // console.log(typeof data);
             setMapData(data);
             console.log('已取得第三方 API 的地圖資料');
         } catch (error) {
             console.error('處理連線到第三方 API 取得地圖資料時發生錯誤：' , error)
+        } finally {
+            setIsLoading(false);
         }
     }
+
+    useEffect(() => {
+        let isSubscirbed = true;
+        if (species !== '') {
+            fetchMapData(species);
+        }
+        return () => {
+            isSubscirbed = false;
+            setMapData({});
+        }
+    }, [species]);
 
     return (
         <>
@@ -59,8 +82,10 @@ export default function App() {
                         infoData={infoData}
                         onChange={handleChange}
                         species={species}
+                        isLoading={isLoading}
                     />
                     <AppearMap
+                        isLoading={isLoading}
                         mapData={mapData}
                         species={species}                    
                     />

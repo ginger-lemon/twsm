@@ -3,12 +3,15 @@ import { useState, useEffect } from "react";
 import { StyledSearchResult, StyledBasicInfoCard, StyledMoreInfoCard, StyledSelect, Tag, RowTexts, FixedTexts, CardContent } from "../styles/Styled.Search.js";
 
 // 下拉式選單，會傳資料給 API 去取得 JSON 顯示在下方的欄位
-function DropdownList({ onChange }) {
+function DropdownList({ onChange, isLoading }) {
     return (
         <form>
             <StyledSelect>
                 {/* TODO: option 無法再展開時固定在 select 下方 */}
-                <select onChange={onChange}>
+                <select 
+                    onChange={onChange}
+                    disabled={isLoading}
+                >
                     {optionData.map(
                         ({name, value}) => (
                         <option key={name} value={value}>{name}</option>
@@ -47,8 +50,6 @@ function MoreInfoCard({infoData}) {
     const { calledName } = infoData;
 
     function handleExtend() {
-        // console.log('按到按鈕');
-        // isExtend ? (console.log('展開')) : (console.log('收合'));
         setIsExtend(!isExtend);
     }
 
@@ -100,18 +101,17 @@ function MoreInfoCard({infoData}) {
     );
 }
 
-export default function SearchResult({ onChange, species, infoData }) {
+export default function SearchResult({ onChange, species, infoData, isLoading }) {
 
     return (
         <StyledSearchResult>
-            <DropdownList onChange={onChange}/>
+            <DropdownList onChange={onChange} isLoading={isLoading}/>
             {species === '' ? '' : (
                 <>
                     <BasicInfoCard infoData={infoData}/>
                     <MoreInfoCard infoData={infoData}/>
                 </>
             )} 
-           
         </StyledSearchResult>
     );
 }
