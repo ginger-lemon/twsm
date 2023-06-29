@@ -142,9 +142,9 @@ export function fetchData(value) {
             apply: "用於滷肉、製作點心與佐料；其葉子也是原住民製作酒麴的材料之一。"
         };
         return responseData;
-    }  else {
-        const responseData = "好像有問題";
-        return responseData;
+    } else {
+        // 如果 value 為 '' ，回覆空字串
+        return '';
     }
     
 } 

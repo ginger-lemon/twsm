@@ -12,6 +12,9 @@ export const StyledNav = styled.nav`
     text-align: center;
     /* copyright 定位 */
     position: relative;
+
+    /* 在網頁上固定 */
+    position: fixed;
 `;
 
 export const Logo = styled.div`

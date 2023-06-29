@@ -4,16 +4,17 @@ import { StyledNav, StyledTabs, Logo, StyledFooter  } from "../styles/Styled.Nav
 function Tabs() {
     return (
         <StyledTabs>
-            <a href="#">關於我們</a>
+            <a href="https://ginger-lemon.medium.com/list/8e84b2d3130f" target="_blank">開發紀錄</a>
+            <a href="https://github.com/ginger-lemon/twsm" target="_blank">GitHub</a>
         </StyledTabs>
     );
 }
 
 export default function NavBar() {
     return (
-        <StyledNav>
+        <StyledNav className="nav-fixed">
             <Logo>
-                <a href="/dist/index.html">
+                <a href=".">
                     <img src="../src/img/logo.svg" />
                 </a> 
             </Logo> 

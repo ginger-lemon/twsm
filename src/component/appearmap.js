@@ -8,7 +8,10 @@ export default function AppearMap({ mapData, isLoading }) {
     if (isLoading) {
         return (
             <StyledMapContainer>
-                <div>地圖資料讀取中⋯⋯</div>
+                <div className="loading">
+                    <p>地圖資料讀取中⋯⋯</p>
+                    <img src="../src/img/loading.svg"/>
+                </div>
                 <MapContainer
                 center={[23.697809, 120.960518]} 
                 zoom={8} 
@@ -24,6 +27,8 @@ export default function AppearMap({ mapData, isLoading }) {
     } else if (mapData) {
         return (
             <StyledMapContainer>
+                <div className="loading">
+                </div>
                 <MapContainer
                 center={[23.697809, 120.960518]} 
                 zoom={8} 
@@ -52,6 +57,7 @@ export default function AppearMap({ mapData, isLoading }) {
 
     return (
         <StyledMapContainer>
+            <div className="loading"></div>
             <MapContainer
             center={[23.697809, 120.960518]} 
             zoom={8} 
@@ -61,24 +67,6 @@ export default function AppearMap({ mapData, isLoading }) {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                {/* API 回傳資料後才會出現的地圖標記：開始 */}
-                {isLoading ? (
-                    <div>讀取中請稍候⋯⋯</div>
-                ) : (
-                    <MarkerClusterGroup>
-                        {mapData && mapData.features.map((feature, index) => (
-                            <Marker 
-                                key={index} 
-                                position={[feature.geometry.coordinates[1], feature.geometry.coordinates[0]]}
-                                >
-                                <Popup>
-                                    {"你可以在這裡看到：" + [feature.properties.lat, feature.properties.lng]}
-                                </Popup>
-                            </Marker>
-                        ))}
-                    </MarkerClusterGroup>
-                )}
-                {/* API 回傳資料後才會出現的地圖標記：結束 */}
             </MapContainer>
         </StyledMapContainer>
     );

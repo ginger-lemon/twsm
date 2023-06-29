@@ -168,7 +168,8 @@ export const StyledSelect = styled.div`
 `;
 
 export const StyledSearchResult = styled.div`
-    /* width: 45%; */
+    /* border: 1px solid red; */
+    width: 510px;
     /* margin-right: 60px; */
 `;
 

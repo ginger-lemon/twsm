@@ -4,7 +4,8 @@ import { createGlobalStyle } from "styled-components";
 export const StyledMain = styled.main`
     /* 讓 main 內部如有複數元件橫向定位 */
     display: flex;
-    width: 1100px;
+    /* width: 1100px; */
+    padding-left: 182px;
     margin: 60px auto;
     gap: 60px;
 
