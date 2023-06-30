@@ -46,11 +46,11 @@ function BasicInfoCard({infoData}) {
 
 // 最下方更多資訊
 function MoreInfoCard({infoData}) {
-    const [isExtended, setIsExtend] = useState(false);
+    const [isClosed, setIsClosed] = useState();
     const { calledName } = infoData;
 
-    function handleExtend() {
-        setIsExtend(!isExtended);
+    function handleClosed() {
+        setIsClosed(!isClosed);
     }
 
     return (
@@ -72,7 +72,7 @@ function MoreInfoCard({infoData}) {
                     </FixedTexts>
 
                     {/* 卡片展開才會出現的部分 */}
-                    <div style={{display: isExtended? 'block' : 'none'}}>
+                    <div style={{display: isClosed ? 'none' : 'block'}}>
                         <RowTexts >
                             <p>特性｜</p>
                             <p>{infoData.behavior}</p>
@@ -89,12 +89,12 @@ function MoreInfoCard({infoData}) {
                 </CardContent>
             </div>
 
-            {isExtended ? 
-                (<button type="button" className="btn-box" onClick={handleExtend}>
-                    <img src="../src/img/closeBtn.svg"/>
-                </button>) :
-                (<button type="button" className="btn-box" onClick={handleExtend}>
+            {isClosed ? 
+                (<button type="button" className="btn-box" onClick={handleClosed}>
                     <img src="../src/img/extendBtn.svg"/>
+                </button>) :
+                (<button type="button" className="btn-box" onClick={handleClosed}>
+                    <img src="../src/img/closeBtn.svg"/>
                 </button>)}
             
         </StyledMoreInfoCard>

@@ -29,9 +29,9 @@ export function fetchData(value) {
             classes: ["芸香科", "花椒屬"],
             imgUrl: "https://www.tbn.org.tw/sites/ozop/files/styles/extra_large/public/taxonbio/featured_image/biotaxon-d028a466-95d7-42a4-b79e-a8767fa9b261-3.jpg?itok=cHNdcBRz",
             calledName: ["紅刺楤", "鳥不踏","Tana （泰雅族）", "Kyana'kk（排灣族）"],
-            behavior: "分佈於臺灣全島低地至海拔 1600 公尺山區，尤其是火燒森林後的新生地與崩落裸地；開花期為 8~9 月，結果期為 10~12 月。",
-            feature: "1~2 月會長出嫩芽，嫩芽具有強烈香氣；葉柄與心部長成紅色，全株有刺且有香蔥味，枝幹上長滿瘤刺。",
-            apply: "嫩葉或幼苗部分可食用，排灣族經常將嫩葉代替香料加入湯中調味；其他部分可作為藥用材料。"
+            behavior: "分佈於臺灣全島低地至海拔 1600 公尺山區；開花期為 8~9 月，結果期為 10~12 月。",
+            feature: "葉柄與心部長成紅色，全株有刺且有香蔥味，枝幹上長滿瘤刺。",
+            apply: "嫩葉或幼苗部分可食用，排灣族常將嫩葉加入湯中調味；其他部分可作為藥用材料。"
         };
         return responseData;
 
@@ -47,9 +47,9 @@ export function fetchData(value) {
             classes: ["樟科", "樟屬"],
             imgUrl: "http://kplant.biodiv.tw/%E5%9C%9F%E8%82%89%E6%A1%82/%E5%9C%9F%E8%82%89%E6%A1%82-%E8%91%8900.jpg",
             calledName: ["臺灣土玉桂", "山肉桂", "土肉桂"],
-            behavior: "常見於台灣海拔 500~1500 公尺向陽陡峭山坡處；開花期為 6~9 月，結果期為 8~10 月。",
+            behavior: "常見於台灣海拔 500~1500 公尺向陽山坡處；開花期為 6~9 月，結果期為 8~10 月。",
             feature: "外觀像胡氏肉桂，但枝幹表面平滑具有強烈的肉桂香氣；果實成熟後便紫黑色。",
-            apply: "樹皮可代替肉桂，但台灣多用其葉子煮湯或泡茶；鄒族人將樹皮作為零食、阿美族將果實搭配檳榔食用；樹皮亦有藥用療效。"
+            apply: "樹皮可代替肉桂，但台灣多用其葉子煮湯或泡茶；鄒族人將樹皮作為零食、阿美族將果實搭配檳榔食用。"
         };
         return responseData;
 
@@ -85,7 +85,7 @@ export function fetchData(value) {
             calledName: ["埔鹽", "山埔鹽", "台灣鹽麩子", "鹽東仔"],
             behavior: "生長於台灣 2000 公尺以下中低海拔向陽開闊地的叢林內，全台各地皆可見。",
             feature: "落葉性小喬木，花生長於枝頂，果實成熟時為成紅色。",
-            apply: "原住民將果實外側包裹乳脂狀物作為食鹽替代物，嫩葉可做野菜食用；其他部位具藥用療效。"
+            apply: "原住民將果實外側包裹乳脂狀物作為食鹽替代物，嫩葉可做野菜食用。"
         };
         return responseData;
 
@@ -119,7 +119,7 @@ export function fetchData(value) {
             classes: ["薑科", "月桃屬"],
             imgUrl: "http://kplant.biodiv.tw/%E6%9C%88%E6%A1%83/%E6%9C%88%E6%A1%83-%E8%8A%B1%E5%BA%8F06.jpg",
             calledName: ["良薑", "玉桃", "虎子花", "Bassiyan （泰雅族）", "Garto （排灣族）"],
-            behavior: "分佈於台灣中低海拔平地與山區、蘭嶼、綠島。台灣生長的 18 種月桃中有 12 種為台灣特有種。",
+            behavior: "分佈於台灣中低海拔平地與山區、蘭嶼、綠島。",
             feature: "全株高 1~3 公尺，葉長 60~70 公分、寬 10~15 公分，花成漏斗狀向下生長。",
             apply: "其葉子多用來包粽子；泰雅族會將葉子、花、種子入菜，烹調方式包含水煮、涼拌與燒烤。"
         };
