@@ -5,6 +5,10 @@ export const StyledMapContainer = styled.div`
         width: 520px;
         height: 720px;
 
+        @media (max-width: 720px) {
+            width: 360px;
+            height: 720px;
+        }
     }
 
     .loading {

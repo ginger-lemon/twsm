@@ -5,7 +5,9 @@ function Tabs() {
     return (
         <StyledTabs>
             <a href="https://ginger-lemon.medium.com/list/8e84b2d3130f" target="_blank">開發紀錄</a>
-            <a href="https://github.com/ginger-lemon/twsm" target="_blank">GitHub</a>
+            <a href="https://github.com/ginger-lemon/twsm" target="_blank">
+                <img src="../src/img/github.svg"/>
+            </a>
         </StyledTabs>
     );
 }

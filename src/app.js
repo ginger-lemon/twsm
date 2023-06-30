@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ResetStyle } from "./styles/Styled.reset.js";
-import { GlobalStyles, StyledContainer,StyledMain } from "./styles/Styled.global.js";
+import { GlobalStyles, StyledContainer,StyledMain, StyledRWDFooter } from "./styles/Styled.global.js";
 import SearchSection from "./component/search.result.js";
 import NavBar from "./component/nav.js";
 import AppearMap from "./component/appearmap.js";
@@ -90,6 +90,9 @@ export default function App() {
                         isLoading={isLoading}
                         mapData={mapData}                 
                     />
+                    <StyledRWDFooter>
+                        <p>© 2023 GingerLemon.</p>
+                    </StyledRWDFooter>
                 </StyledMain>
             </StyledContainer>
         </>

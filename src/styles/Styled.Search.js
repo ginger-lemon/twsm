@@ -5,25 +5,43 @@ export const FixedTexts = styled.div`
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
+    
+    @media (max-width: 720px) {
+        flex-direction: column;
+    }
+
     img {
         width: 120px;
         height: 120px;
         border-radius: 25px;
+
+        @media (max-width: 720px) {
+            margin: auto;
+        }
     }
 
     div {
         margin-left: 30px;
         display: inline-block;
+
+        @media (max-width: 720px) {
+            margin-left: 0;
+        }
     }
 
     div p:first-child {
         margin: 8px 0px;
         font-weight: bold;
     }
+
 `;
 
 export const CardContent = styled.div`
     margin: 30px;
+
+    @media (max-width: 720px) {
+        margin: 24px;
+    }
 `;
 
 export const RowTexts = styled.div`
@@ -34,6 +52,7 @@ export const RowTexts = styled.div`
     p:nth-of-type(1) {
         display: inline-block;
         width: 15%;
+        font-weight: bold;
     }
 
     p:nth-of-type(2) {
@@ -41,7 +60,21 @@ export const RowTexts = styled.div`
         width: 85%;
     }
 
-    /* display: none; */
+    @media (max-width: 720px){
+        display: block;
+        
+        p:nth-of-type(1) {
+            width: 100%;
+            padding-bottom: 6px;
+            font-weight: bold;
+        }
+
+        p:nth-of-type(2) {
+            width: 100%;
+        }
+        
+
+    }
 `;
 
 export const StyledMoreInfoCard = styled.div`
@@ -53,6 +86,10 @@ export const StyledMoreInfoCard = styled.div`
         border: 1px solid #000000;
         border-radius: 10px;
         width: 510px;
+
+        @media (max-width: 720px) {
+            width: 320px;
+        }
     }
 
     button {
@@ -74,6 +111,7 @@ export const StyledMoreInfoCard = styled.div`
 `;
 
 export const Tag = styled.div`
+    flex: none;
     background-color: #188216;
     border-radius: 12px;
     padding: 6px 35px;
@@ -82,6 +120,10 @@ export const Tag = styled.div`
     color: #ffffff;
     margin-right: 20px;
     display: inline-block;
+
+    @media (max-width: 720px) {
+        font-size: 18px;
+    }
 `;
 
 export const StyledBasicInfoCard = styled.div`
@@ -90,19 +132,27 @@ export const StyledBasicInfoCard = styled.div`
     p:nth-of-type(1) {
         /* 學名 */
         font-size: 24px;
-        line-height: 29px;
+        line-height: 1.2em;
         color: #489688;
         font-weight: lighter;
         font-style: italic;
+
+        @media (max-width: 720px) {
+            font-size: 20px;
+        }
     }
 
     p:nth-of-type(2) {
         /* 香料名稱 */
         font-size: 48px;
-        line-height: 58px;
+        line-height: 1.2em;
         color: #2C655B;
         font-weight: bold;
         position: relative;
+
+        @media (max-width: 720px) {
+            font-size: 32px;
+        }
     }
 
     p:nth-of-type(2)::after {
@@ -112,21 +162,26 @@ export const StyledBasicInfoCard = styled.div`
         position: absolute;
         left: 0px;
         top: 75px;
+
+        @media (max-width: 720px) {
+            width: 325px;
+            top: 52px;
+        }
     }
 
     .tags-block {
         margin-top: 30px;
     }
 
-    p:nth-of-type(3) {
-        /* 香料物種階層 */
-        margin-top: 35px;
+    p:nth-of-type(3),
+    p:nth-of-type(4) {
+        margin-top: 30px;
+
+        @media (max-width: 720px) {
+            margin-top: 20px;
+        }
     }
 
-    p:nth-of-type(4) {
-        /* 別稱（英文）部分 */
-        margin-top: 30px;
-    }
 `;
 
 export const StyledSelect = styled.div`
@@ -153,8 +208,14 @@ export const StyledSelect = styled.div`
 
         /* 滑鼠按到會出現手 */
         cursor: pointer;
-    }
 
+        @media (max-width: 720px) {
+            width: 300px;
+            height: 50px;
+            font-size: 18px;
+        }
+    }
+    
     &::after {
         /* 讓 after 不會接受到滑鼠的事件 */
         pointer-events: none;
@@ -164,12 +225,23 @@ export const StyledSelect = styled.div`
         position: absolute;
         top: -8px;
         left: 300px;
+
+        @media (max-width: 720px) {
+            left: 250px;
+            top: -14px;
+        }
     }
+    
+
+    
 `;
 
 export const StyledSearchResult = styled.div`
-    /* border: 1px solid red; */
     width: 510px;
-    /* margin-right: 60px; */
+
+    @media (max-width: 720px) {
+        width: 320px
+    }
+
 `;
 

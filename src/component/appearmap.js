@@ -27,8 +27,6 @@ export default function AppearMap({ mapData, isLoading }) {
     } else if (mapData) {
         return (
             <StyledMapContainer>
-                <div className="loading">
-                </div>
                 <MapContainer
                 center={[23.697809, 120.960518]} 
                 zoom={8} 
@@ -57,7 +55,6 @@ export default function AppearMap({ mapData, isLoading }) {
 
     return (
         <StyledMapContainer>
-            <div className="loading"></div>
             <MapContainer
             center={[23.697809, 120.960518]} 
             zoom={8} 
