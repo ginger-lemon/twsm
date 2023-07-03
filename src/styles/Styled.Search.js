@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const FixedTexts = styled.div`
     display: flex;
     flex-direction: row;
@@ -36,6 +35,7 @@ export const FixedTexts = styled.div`
 
 `;
 
+// 包裹整個卡片部分的內容
 export const CardContent = styled.div`
     margin: 30px;
 
@@ -44,6 +44,7 @@ export const CardContent = styled.div`
     }
 `;
 
+// 特性、特徵、應用的基本元件
 export const RowTexts = styled.div`
     display: flex;
     align-items: flex-start;
@@ -77,6 +78,7 @@ export const RowTexts = styled.div`
     }
 `;
 
+// 資訊卡部分（可以收合的整個部分）
 export const StyledMoreInfoCard = styled.div`
     margin-top: 30px;
     position: relative;
@@ -126,6 +128,7 @@ export const Tag = styled.div`
     }
 `;
 
+// 上半部資訊部分（沒有卡片的）
 export const StyledBasicInfoCard = styled.div`
     margin-top: 30px;
 
@@ -184,6 +187,7 @@ export const StyledBasicInfoCard = styled.div`
 
 `;
 
+// 下拉式選單
 export const StyledSelect = styled.div`
     position: relative;
 
@@ -236,6 +240,7 @@ export const StyledSelect = styled.div`
     
 `;
 
+// 整個搜尋與資訊欄位的部分
 export const StyledSearchResult = styled.div`
     width: 510px;
 
