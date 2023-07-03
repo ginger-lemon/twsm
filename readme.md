@@ -35,12 +35,11 @@ The Taiwanese Native Spices Map utilizes data from the Taiwan Biodiversity Netwo
 - Babel (for js, JSX)
 - Git/Github (version control)
 
-
 ## Features
 
 ### Search spices
 
-![](../present/gif/main-feature.gif)
+![](./src/img/gif/main-feature.gif)
 
 Users can select different spice names from the dropdown list. The section below will present basic information; while the map on the right side will show the distribution of the selected spices in Taiwan.
 
@@ -52,7 +51,7 @@ P.S. The distribution shown on the map represents the observed positions at pres
 
 ### More Information
 
-![](../present/gif/card-click.gif)
+![](./src/img/gif/card-click.gif)
 
 The basic information about the spices is divided into two parts:
 
@@ -73,7 +72,7 @@ The basic information about the spices is divided into two parts:
 
 ### Responsive Web Design (RWD)
 
-![](../present/gif/rwd.gif)
+![](./src/img/gif/rwd.gif)
 
 Implementing Response Web Design (RWD) to ensure users have the best experience across different devices.
 
