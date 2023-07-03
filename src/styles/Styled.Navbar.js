@@ -20,8 +20,8 @@ export const StyledNav = styled.nav`
     @media(max-width: 1280px) {
         width: 100vw;
         height: 120px;
-        /* 導覽列在最上層 */
-        z-index: +1;
+        /* 導覽列在最上層，直接用 +9999 避免地圖的 layer */
+        z-index: +999;
         /* 讓元素水平排列 */
         display: flex;
         align-items: center;
