@@ -1,6 +1,5 @@
 export function fetchData(value) {
     if (value === "Litsea cubeba") {
-        console.log("成功連線抓取山胡椒資料");
         const responseData = {
             UUID: "a7348813-fff4-4812-ade1-cb7c83d6624c",
             name: "山胡椒",
@@ -18,7 +17,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Zanthoxylum ailanthoides") {
-        console.log("成功連線抓取食茱萸資料");
         const responseData = {
             UUID: "d028a466-95d7-42a4-b79e-a8767fa9b261",
             name: "食茱萸",
@@ -36,7 +34,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Cinnamomum osmophloeum") {
-        console.log("成功連線抓取土肉桂資料");
         const responseData = {
             UUID: "fbf16533-6d06-4262-beda-aa485ce236cc",
             name: "土肉桂",
@@ -54,7 +51,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Aralia cordata") {
-        console.log("成功連線抓取土當歸資料");
         const responseData = {
             UUID: "033eaf01-963d-4c73-bd91-e34704ecd7e6",
             name: "食用土當歸",
@@ -72,7 +68,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Rhus javanica") {
-        console.log("成功連線抓取羅氏鹽膚木資料");
         const responseData = {
             UUID: "b830a4e3-225d-4222-b103-b0db715bb8e4",
             name: "羅氏鹽膚木",
@@ -90,7 +85,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Machilus kusanoi") {
-        console.log("成功連線抓取大葉楠果時資料");
         const responseData = {
             UUID: "e540b1b3-77cd-41f9-a207-737259c577d3",
             name: "大葉楠",
@@ -108,7 +102,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Alpinia zerumbet") {
-        console.log("成功連線抓取月桃資料");
         const responseData = {
             UUID: "b649a43f-0566-452a-a650-d93045896c27",
             name: "月桃",
@@ -126,7 +119,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Limnophila rugosa") {
-        console.log("成功連線抓取大葉石龍尾資料");
         const responseData = {
             UUID: "1d8c9567-3652-4ea6-a19c-2a3ebb1e01ea",
             name: "大葉石龍尾",
