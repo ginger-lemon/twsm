@@ -87,7 +87,7 @@ export const Logo = styled.div`
             height: 54px;
             background-image: url("../src/img/logo-phone.svg");
             background-repeat: no-repeat;
-            margin-left: 45px;
+            margin-left: 30px;
         }
     }
 `;
