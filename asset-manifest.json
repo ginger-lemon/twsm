@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/twsm/static/css/main.dbc18d17.css",
+    "main.js": "/twsm/static/js/main.126c0b39.js",
+    "static/js/787.1d5b9788.chunk.js": "/twsm/static/js/787.1d5b9788.chunk.js",
+    "static/media/logo-phone.svg": "/twsm/static/media/logo-phone.4c01d351cf43936a4d1299be1101a3bd.svg",
+    "static/media/logo.svg": "/twsm/static/media/logo.6ddc4ef9a1af32319e560aed094c5108.svg",
+    "static/media/map-marker-svgrepo-com.svg": "/twsm/static/media/map-marker-svgrepo-com.481fa88c235bb06614bd48e80b57fbd5.svg",
+    "static/media/loading.svg": "/twsm/static/media/loading.fda677c7e65526887fd68c245595cf70.svg",
+    "index.html": "/twsm/index.html",
+    "static/media/github.svg": "/twsm/static/media/github.b0156332b5bd758ca33b6bf219e4da17.svg",
+    "static/media/extendBtn.svg": "/twsm/static/media/extendBtn.301fcb4d9dca58870c56c8ff021b9c34.svg",
+    "static/media/closeBtn.svg": "/twsm/static/media/closeBtn.2b0d20704b7b2532378a7f8e4c167628.svg",
+    "main.dbc18d17.css.map": "/twsm/static/css/main.dbc18d17.css.map",
+    "main.126c0b39.js.map": "/twsm/static/js/main.126c0b39.js.map",
+    "787.1d5b9788.chunk.js.map": "/twsm/static/js/787.1d5b9788.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dbc18d17.css",
+    "static/js/main.126c0b39.js"
+  ]
+}
