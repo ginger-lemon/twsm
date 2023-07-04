@@ -1,7 +1,15 @@
 import React from "react";
+import L from "leaflet";
 import { StyledMapContainer } from "../styles/Styled.map.js";
 import { MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
+import loadingImg from "../img/loading.svg";
+import mapIcon from "../img/map-marker-svgrepo-com.svg";
+
+const customIcon = L.icon({
+    iconUrl: mapIcon,
+    iconSize: [35, 35]
+});
 
 export default function AppearMap({ mapData, isLoading }) {
 
@@ -10,7 +18,7 @@ export default function AppearMap({ mapData, isLoading }) {
             <StyledMapContainer>
                 <div className="loading">
                     <p>地圖資料讀取中⋯⋯</p>
-                    <img src="../src/img/loading.svg"/>
+                    <img src={loadingImg} alt="loading" />
                 </div>
                 <MapContainer
                 center={[23.697809, 120.960518]} 
@@ -39,6 +47,7 @@ export default function AppearMap({ mapData, isLoading }) {
                         <MarkerClusterGroup>
                             {mapData && mapData.features.map((feature, index) => (
                                 <Marker 
+                                    icon={customIcon}
                                     key={index} 
                                     position={[feature.geometry.coordinates[1], feature.geometry.coordinates[0]]}
                                     >

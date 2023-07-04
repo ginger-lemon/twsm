@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import logoRWD from "../img/logo-phone.svg";
 
 export const StyledNav = styled.nav`
     /* 關閉繼承的 flex 設定避免壓縮寬度 */
@@ -68,7 +69,7 @@ export const Logo = styled.div`
             /* border: 1px solid blue; */
             margin-bottom: 0;
             margin-left: 60px;
-            background-image: url("../src/img/logo-phone.svg");
+            background-image: url(${logoRWD});
             background-repeat: no-repeat;
         }
 
@@ -85,7 +86,7 @@ export const Logo = styled.div`
         a {
             width: 146px;
             height: 54px;
-            background-image: url("../src/img/logo-phone.svg");
+            background-image: url(${logoRWD});
             background-repeat: no-repeat;
             margin-left: 45px;
         }

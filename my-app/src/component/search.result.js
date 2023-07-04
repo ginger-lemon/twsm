@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { StyledSearchResult, StyledBasicInfoCard, StyledMoreInfoCard, Tag, RowTexts, FixedTexts, CardContent } from "../styles/Styled.Search.js";
 import DropdownList from "./dropdownlist.js";
+import extendBTN from "../img/extendBtn.svg";
+import closeBTN from "../img/closeBtn.svg"
 
 // 中間區段，顯示學名、中文名稱、分類階層、別名、特別標記
 function BasicInfoCard({infoData}) {
@@ -41,10 +43,10 @@ function MoreInfoCard({infoData}) {
                 {/* 卡片收合展開都固定的內容 */}
                     <FixedTexts>
                         <img 
-                            // TODO: 圖片比例跑掉
                             src={infoData.imgUrl}
                             width="120px"
                             height="120px"
+                            alt="spices"
                         />
                         <div>
                             <p>大家怎麼稱呼？</p>
@@ -72,10 +74,10 @@ function MoreInfoCard({infoData}) {
 
             {isClosed ? 
                 (<button type="button" className="btn-box" onClick={handleClosed}>
-                    <img src="../src/img/extendBtn.svg"/>
+                    <img src={extendBTN} alt="btn"/>
                 </button>) :
                 (<button type="button" className="btn-box" onClick={handleClosed}>
-                    <img src="../src/img/closeBtn.svg"/>
+                    <img src={closeBTN} alt="btn"/>
                 </button>)}
             
         </StyledMoreInfoCard>
