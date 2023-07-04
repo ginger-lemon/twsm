@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledMapContainer } from "../../../dist/old-file/src/styles/Styled.map.js";
+import { StyledMapContainer } from "../styles/Styled.map.js";
 import { MapContainer, Marker, Popup, TileLayer} from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 
