@@ -1,6 +1,5 @@
 export function fetchData(value) {
     if (value === "Litsea cubeba") {
-        console.log("成功連線抓取山胡椒資料");
         const responseData = {
             UUID: "a7348813-fff4-4812-ade1-cb7c83d6624c",
             name: "山胡椒",
@@ -9,7 +8,7 @@ export function fetchData(value) {
             labels: ["原生"],
             status: ["暫無危機"],
             classes: ["樟科", "木薑子屬"],
-            imgUrl: "http://kplant.biodiv.tw/%E5%B1%B1%E8%83%A1%E6%A4%92/%E5%B1%B1%E8%83%A1%E6%A4%92-%E5%AF%A603.jpg",
+            imgUrl: "https://nature.goto307.com.tw/upload/catalog_b/0a2dcba2a6201c595884ae2586dc0df2.jpg",
             calledName: ["山雞椒", "MaKao（泰雅族）", "Maqrig（太魯閣族）", "Mae’aew （賽夏族）"],
             behavior: "分佈於台灣 1000 公尺上下中低海拔地區；開花期為 2-4 月，結果期為 6-8 月。",
             feature: "有薑與胡椒的香氣，全株皆可食用。果實曬乾後成紫黑色，外型似黑胡椒粒。",
@@ -18,7 +17,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Zanthoxylum ailanthoides") {
-        console.log("成功連線抓取食茱萸資料");
         const responseData = {
             UUID: "d028a466-95d7-42a4-b79e-a8767fa9b261",
             name: "食茱萸",
@@ -36,7 +34,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Cinnamomum osmophloeum") {
-        console.log("成功連線抓取土肉桂資料");
         const responseData = {
             UUID: "fbf16533-6d06-4262-beda-aa485ce236cc",
             name: "土肉桂",
@@ -45,7 +42,7 @@ export function fetchData(value) {
             labels: ["原生", "台灣特有"],
             status: ["接近受脅"],
             classes: ["樟科", "樟屬"],
-            imgUrl: "http://kplant.biodiv.tw/%E5%9C%9F%E8%82%89%E6%A1%82/%E5%9C%9F%E8%82%89%E6%A1%82-%E8%91%8900.jpg",
+            imgUrl: "https://npgis.cpami.gov.tw/public/data/jpg/203599p001.jpg",
             calledName: ["臺灣土玉桂", "山肉桂", "土肉桂"],
             behavior: "常見於台灣海拔 500~1500 公尺向陽山坡處；開花期為 6~9 月，結果期為 8~10 月。",
             feature: "外觀像胡氏肉桂，但枝幹表面平滑具有強烈的肉桂香氣；果實成熟後便紫黑色。",
@@ -54,7 +51,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Aralia cordata") {
-        console.log("成功連線抓取土當歸資料");
         const responseData = {
             UUID: "033eaf01-963d-4c73-bd91-e34704ecd7e6",
             name: "食用土當歸",
@@ -63,7 +59,7 @@ export function fetchData(value) {
             labels: ["原生"],
             status: ["接近受脅"],
             classes: ["五加科", "楤木屬"],
-            imgUrl: "http://kplant.biodiv.tw/%E9%A3%9F%E7%94%A8%E5%9C%9F%E7%95%B6%E6%AD%B8/%E9%A3%9F%E7%94%A8%E5%9C%9F%E7%95%B6%E6%AD%B8-%E8%91%89%E6%AD%A302.JPG",
+            imgUrl: "https://nature.goto307.com.tw/upload/catalog_b/4288f0cdcdc9b79a60610d457a33a8ac.jpg",
             calledName: ["臺灣土當歸", "食用楤木", "五葉參"],
             behavior: "分佈於台灣海拔 1800~2800 公尺山區草叢；開花期為 6~9 月，結果期為 8~10 月。",
             feature: "全株高 1~2 公尺，葉長 30~50 公分，卵形、長橢圓形或新型，邊緣鋸齒狀。",
@@ -72,7 +68,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Rhus javanica") {
-        console.log("成功連線抓取羅氏鹽膚木資料");
         const responseData = {
             UUID: "b830a4e3-225d-4222-b103-b0db715bb8e4",
             name: "羅氏鹽膚木",
@@ -81,7 +76,7 @@ export function fetchData(value) {
             labels: ["原生"],
             status: ["暫無危機"],
             classes: ["漆樹科", "漆樹屬"],
-            imgUrl: "http://kplant.biodiv.tw/%E7%BE%85%E6%B0%8F%E9%B9%BD%E8%86%9A%E6%9C%A8/%E9%B9%BD%E8%86%9A%E6%9C%A8-%E9%B9%BD%E5%AF%A625.JPG",
+            imgUrl: "https://nature.goto307.com.tw/upload/catalog_b/8fedd687381594517f826bb7129abc05.jpg",
             calledName: ["埔鹽", "山埔鹽", "台灣鹽麩子", "鹽東仔"],
             behavior: "生長於台灣 2000 公尺以下中低海拔向陽開闊地的叢林內，全台各地皆可見。",
             feature: "落葉性小喬木，花生長於枝頂，果實成熟時為成紅色。",
@@ -90,7 +85,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Machilus kusanoi") {
-        console.log("成功連線抓取大葉楠果時資料");
         const responseData = {
             UUID: "e540b1b3-77cd-41f9-a207-737259c577d3",
             name: "大葉楠",
@@ -99,7 +93,7 @@ export function fetchData(value) {
             labels: ["原生", "台灣特有"],
             status: ["暫無危機"],
             classes: ["樟科", "楨楠屬"],
-            imgUrl: "http://kplant.biodiv.tw/%E5%A4%A7%E8%91%89%E6%A5%A0/%E5%A4%A7%E8%91%89%E6%A5%A0-%E9%BB%91%E5%AF%A602.JPG",
+            imgUrl: "https://sowhc.sow.org.tw/html/observation/plant/a06plant/a060902-shang-na/s401.JPG",
             calledName: ["大葉楠", "草野楨楠", "大葉楠仔", "楠木", "楠仔"],
             behavior: "分佈於台灣全島中底海拔闊葉林的溪谷與潮濕處。",
             feature: "樹高可達 40 公尺；果實直徑約 1~1.5 公分，成熟時為紫黑色。",
@@ -108,7 +102,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Alpinia zerumbet") {
-        console.log("成功連線抓取月桃資料");
         const responseData = {
             UUID: "b649a43f-0566-452a-a650-d93045896c27",
             name: "月桃",
@@ -117,7 +110,7 @@ export function fetchData(value) {
             labels: ["原生"],
             status: ["暫無危機"],
             classes: ["薑科", "月桃屬"],
-            imgUrl: "http://kplant.biodiv.tw/%E6%9C%88%E6%A1%83/%E6%9C%88%E6%A1%83-%E8%8A%B1%E5%BA%8F06.jpg",
+            imgUrl: "https://nature.goto307.com.tw/upload/catalog_b/0fb3a7669ea919f74db2435c8a6a5145.jpg",
             calledName: ["良薑", "玉桃", "虎子花", "Bassiyan （泰雅族）", "Garto （排灣族）"],
             behavior: "分佈於台灣中低海拔平地與山區、蘭嶼、綠島。",
             feature: "全株高 1~3 公尺，葉長 60~70 公分、寬 10~15 公分，花成漏斗狀向下生長。",
@@ -126,7 +119,6 @@ export function fetchData(value) {
         return responseData;
 
     } else if (value === "Limnophila rugosa") {
-        console.log("成功連線抓取大葉石龍尾資料");
         const responseData = {
             UUID: "1d8c9567-3652-4ea6-a19c-2a3ebb1e01ea",
             name: "大葉石龍尾",
@@ -135,7 +127,7 @@ export function fetchData(value) {
             labels: ["原生"],
             status: ["易危"],
             classes: ["車前科", "石龍尾屬"],
-            imgUrl: "http://kplant.biodiv.tw/%E5%A4%A7%E8%91%89%E7%9F%B3%E9%BE%8D%E5%B0%BE/%E5%A4%A7%E8%91%89%E7%9F%B3%E9%BE%8D%E5%B0%BE-%E8%91%8903.JPG",
+            imgUrl: "https://nature.goto307.com.tw/upload/catalog_b/47b52330f2e32e0707ab100d70cafbe0.jpg",
             calledName: ["大葉田香", "水茴香", "水香菜", "水八角", "水胡椒"],
             behavior: "分佈於台灣低海拔沼澤與稻田中；花期為 9~12 月。",
             feature: "花冠為粉紅色或紫色，葉子對生、呈現卵形、橢圓形，味道與八角相似。",
