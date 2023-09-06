@@ -6,23 +6,23 @@ A quick introduction of Taiwanese native species for beginners.
 
 ![mockup](https://i.imgur.com/59R9Cz4.png)
 
-The Taiwanese Native Spices Map is utilized geographic data from the Taiwanese Biodiversity Network (TBN), along with spices introductions and resources from other platforms.
+The [Taiwanese Native Spices Map](https://ginger-lemon.github.io/twsm/) is utilized geographic data from the Taiwanese Biodiversity Network (TBN), along with spices introductions and resources from other platforms.
 Users can access basic information and the distribution location of the selected spice through a dropdown list.
 
+## Getting Started 
 
-## Features
+### Prerequisites
 
-- Select spice and show the distribution location
+Before running the application, make sure you have the following installed:
 
-![show](https://i.imgur.com/xWEBniM.gif)
+- node.js: v18.16.0
+- npm: v9.5.1
 
-- close or extend the info card
+### Available Script 
 
-![card](https://i.imgur.com/bsTWlsD.gif)
-
-- Across Devices (RWD)
-
-![](https://im3.ezgif.com/tmp/ezgif-3-b62acaf306.gif)
+- `npm install` to install dependencies for the app after cloning the repository.
+- `npm start` to run the app in the development mode.
+- `npm run build` to build the app in the production mode.
 
 ## Techniques
 
@@ -37,16 +37,31 @@ the project encountered deployment issues on GitHub Pages, which led to transiti
 - HTML
 - CSS
 - Javascript: ES6(destructuring assignment, arrow functions...)
-- React
+- React ![](https://user-images.githubusercontent.com/134685249/265774391-d7516740-d8ec-439f-a64c-2c574c15fffc.png)
 - React Hooks (useState, useEffect)
-- styled-components: manage style for components
+- styled-components: manage style for components ![](https://user-images.githubusercontent.com/134685249/265771138-11a4692f-8c99-4db7-81c7-e2b2eb31478e.png)
 - leaflet.js: visualize geographic datas
-- react-leaflet: visualize geographic datas
+- react-leaflet: visualize geographic datas ![](https://camo.githubusercontent.com/936b346f16b23f97a21e3d4cf1370bd8f37397575989a125946f47eee9df22c5/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f72656163742d6c6561666c65742e737667)
 
 ### Development Tools
 
 - git/GitHub: version control
 - GitHub Pages: deployment
+
+## Features
+
+- Select spice and show the distribution location
+
+![show](https://i.imgur.com/xWEBniM.gif)
+
+- close or extend the info card
+
+![card](https://i.imgur.com/bsTWlsD.gif)
+
+- Across Devices (RWD)
+
+![RWD](https://upload.cc/i1/2023/09/06/UNcj8J.gif)
+
 
 ## Development Diary
 
