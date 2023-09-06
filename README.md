@@ -60,7 +60,7 @@ the project encountered deployment issues on GitHub Pages, which led to transiti
 
 - Across Devices (RWD)
 
-![RWD](https://upload.cc/i1/2023/09/06/UNcj8J.gif)
+![RWD](./my-app/imgformd/rwd.gif)
 
 
 ## Development Diary
